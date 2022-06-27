@@ -9,6 +9,8 @@
     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
 
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/navMenu.css">
+
     <script src="./js/mini_backend.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/addTask.js"></script>
@@ -17,7 +19,12 @@
 
 <body onload="includeHTML(), init()">
 
-    <div w3-include-html="./templates/addTask.html"></div>
+    <div class="distributor">
+        <div w3-include-html="./templates/navMenu.html"></div>
+
+        <div w3-include-html="./templates/addTask.html"></div>
+    </div>
+
 
 </body>
 
