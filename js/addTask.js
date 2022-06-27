@@ -1,6 +1,8 @@
 let allTasks = [];
 
-
+/**
+ * adds tasks in array
+ */
 function addTask() {
     let description = document.getElementById('description').value;
     let category = document.getElementById('category').value;
@@ -19,7 +21,10 @@ function addTask() {
     console.log('push ' + allTasks);
 }
 
-
+/**
+ * loads all tasks
+ * @param {String} email - test
+ */
 function loadAllTasks() {
     let allTasksAsString = localStorage.getItem('allTasks');
     allTasks = JSON.parse(allTasksAsString);
