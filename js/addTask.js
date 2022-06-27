@@ -1,4 +1,3 @@
-// setURL('http://developerakademie.com/smallest_backend_ever');
 setURL('https://sebastian-gamroth.developerakademie.net/smallest_backend_ever-master/');
 
 let users = [{}];
@@ -9,6 +8,7 @@ async function init() {
 
     // addTask();
     loadAllTasks();
+    backlogList();
 }
 
 let allTasks = [];
