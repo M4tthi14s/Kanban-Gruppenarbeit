@@ -1,5 +1,7 @@
 .navMenu {
-    width: 80px;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
     height: 100vh;
     background-color: blue;
 }

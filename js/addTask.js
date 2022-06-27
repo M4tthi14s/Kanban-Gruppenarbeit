@@ -9,7 +9,6 @@ async function init() {
 
     // addTask();
     loadAllTasks();
-
 }
 
 let allTasks = [];
@@ -31,13 +30,7 @@ async function addTask() {
 
     users.push(task);
     await backend.setItem('users', JSON.stringify(users));
-
-    // let allTasksAsString = JSON.stringify(allTasks);
-    // localStorage.setItem('allTasks', allTasksAsString);
-
-    // console.log('push ' + allTasks);
 }
-
 
 
 /**
@@ -45,11 +38,6 @@ async function addTask() {
  * @param {String} email - test
  */
 function loadAllTasks() {
-    // let allTasksAsString = localStorage.getItem('allTasks');
-    // allTasks = JSON.parse(allTasksAsString);
-
-    // console.log('load ' + allTasks);
-
 
     allTasks.push(users);
 }
