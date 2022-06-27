@@ -13,6 +13,7 @@
 
     <script src="./js/mini_backend.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/navMenu.js"></script>
     <script src="./js/addTask.js"></script>
     <script src="./js/includeHTML.js"></script>
 </head>
@@ -22,7 +23,10 @@
     <div class="distributor">
         <div w3-include-html="./templates/navMenu.html"></div>
 
-        <div w3-include-html="./templates/addTask.html"></div>
+        <div id="board" class="d-none" w3-include-html="./templates/board.html"></div>
+        <div id="backlog" class="d-none" w3-include-html="./templates/backlog.html"></div>
+        <div id="addTask" class="d-none" w3-include-html="./templates/addTask.html"></div>
+        <div id="howTo" class="d-none" w3-include-html="./templates/howTo.html"></div>
     </div>
 
 

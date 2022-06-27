@@ -5,3 +5,7 @@ body {
 .distributor{
     display: flex;
 }
+
+.d-none{
+    display: none;
+}
