@@ -18,7 +18,11 @@ h2 {
 
     height: 700px;
     width: 200px;
-    background-color: rgb(129, 122, 122);
+    background-color: rgb(173, 168, 168);
     margin-left: 150px;
    
+}
+
+.test{
+    border: 1px solid red;
 }

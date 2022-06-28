@@ -1,0 +1,8 @@
+let currentDraggedElement;
+
+
+
+function startDragging(){
+
+
+}
