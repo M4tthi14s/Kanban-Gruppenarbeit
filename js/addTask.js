@@ -12,24 +12,31 @@ async function init() {
 }
 
 
+function formValidationAddTask() {
+    addTask();
+}
+
 /**
  * adds tasks in array
  */
 async function addTask() {
-    let title = document.getElementById('title').value;
-    let description = document.getElementById('description').value;
+    let title = document.getElementById('title');
+    let description = document.getElementById('description');
     let category = document.getElementById('category').value;
     let urgency = document.getElementById('urgency').value;
 
     let task = {
-        'title': title,
+        'title': title.value,
         'names': names,
-        'description': description,
+        'description': description.value,
         'category': category,
         'urgency': urgency,
         'createAt': new Date().getTime(),
         'backlog': true
     };
+
+    title.value = '';
+    description.value = '';
 
     allTasksArray.push(task);
     await backend.setItem('allTasksArray', JSON.stringify(allTasksArray));

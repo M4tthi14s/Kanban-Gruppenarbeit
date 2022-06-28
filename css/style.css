@@ -3,8 +3,10 @@ body {
     font-family: 'PT Sans';
 }
 
-.distributor{
+.distributor {
     display: flex;
+    margin-top: 80px;
+    justify-content: center;
 }
 
 /* .d-none{

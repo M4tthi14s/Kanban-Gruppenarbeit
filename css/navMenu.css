@@ -1,8 +1,12 @@
 .navMenu {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 80px;
     display: flex;
-    flex-direction: column;
-    width: 150px;
-    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
     background-color: blue;
 }
 
