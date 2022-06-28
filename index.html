@@ -9,15 +9,37 @@
     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
 
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/navMenu.css">
+    <link rel="stylesheet" href="./css/backlog.css">
+
+    <script src="./js/mini_backend.js"></script>
     <script src="./js/script.js"></script>
-    <script src="./js/includeHTML.js"></script>
+    <script src="./js/navMenu.js"></script>
     <script src="./js/addTask.js"></script>
-    <script src="./mini_backend.js"></script>
+    <script src="./js/backlog.js"></script>
+    <script src="./js/includeHTML.js"></script>
 </head>
 
-<body onload="includeHTML(), loadAllTasks()">
+<body onload="includeHTML(), init()">
 
-    <div w3-include-html="./templates/addTask.html"></div>
+    <div class="distributor">
+        <div w3-include-html="./templates/navMenu.html"></div>
+
+        <div class="headlineBody" id="headlineBody">
+            <h1>Join</h1>
+            <h2>Add Task</h2>
+        </div>
+
+        <div id="board" class="d-none" w3-include-html="./templates/board.html"></div>
+        <div id="backlog" class="backlog d-none" w3-include-html="./templates/backlog.html"></div>
+        <div id="addTask" class="d-none" w3-include-html="./templates/addTask.html"></div>
+        <div id="howTo" class="d-none" w3-include-html="./templates/howTo.html"></div>
+
+        <div id="copyright" class="d-none" w3-include-html="./templates/copyright.html"></div>
+        <div id="imprint" class="d-none" w3-include-html="./templates/imprint.html"></div>
+        <div id="privacy" class="d-none" w3-include-html="./templates/privacy.html"></div>
+    </div>
+
 
 </body>
 

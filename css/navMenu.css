@@ -1,0 +1,12 @@
+.navMenu {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 100vh;
+    background-color: blue;
+}
+
+.menuLink{
+    color: white;
+    text-decoration: none;
+}
