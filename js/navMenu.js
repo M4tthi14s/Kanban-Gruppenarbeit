@@ -1,6 +1,6 @@
 function menuLink(index) {
 
-    let menuLinkArray = ['board', 'backlog', 'addTask', 'howTo'];
+    let menuLinkArray = ['headlineBody', 'board', 'backlog', 'addTask', 'howTo', 'copyright', "imprint", "privacy"];
     menuLinkArray.splice(menuLinkArray.indexOf(index), 1);
 
     showLink(index);

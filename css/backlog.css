@@ -1,0 +1,13 @@
+.backlog {
+    width: 100%;
+}
+
+.headlineBacklog {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.task {
+    display: flex;
+    border: 1px solid black;
+}
