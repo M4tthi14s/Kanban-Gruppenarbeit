@@ -8,6 +8,7 @@ async function init() {
 
     renderAvatar();
     backlogList();
+    // setTimeout();
 }
 
 
@@ -15,22 +16,25 @@ async function init() {
  * adds tasks in array
  */
 async function addTask() {
+    let title = document.getElementById('title').value;
     let description = document.getElementById('description').value;
     let category = document.getElementById('category').value;
     let urgency = document.getElementById('urgency').value;
 
     let task = {
+        'title': title,
         'names': names,
         'description': description,
         'category': category,
         'urgency': urgency,
-        'createAt': new Date().getTime()
+        'createAt': new Date().getTime(),
+        'backlog': true
     };
 
     allTasksArray.push(task);
     await backend.setItem('allTasksArray', JSON.stringify(allTasksArray));
 
-    console.log(task);
+    init();
 }
 
 let avatarArray = ['Bob', 'Lisa', 'Mili', 'Ron', 'Ula', 'Wolf'];
@@ -51,3 +55,6 @@ function renderAvatar() {
     }
 }
 
+// setTimeout(() => {
+//     document.getElementById('datePicker').value = '2020-05-20'
+// },10);

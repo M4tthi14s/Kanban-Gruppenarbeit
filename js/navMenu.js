@@ -9,12 +9,14 @@ function menuLink(index) {
 
 
 function showLink(index) {
-    document.getElementById(index).classList.remove('d-none');
+    // document.getElementById(index).classList.remove('d-none');
+    document.getElementById(index).style.display='flex';
 }
 
 
 function hideLink(menuLinkArray) {
     menuLinkArray.forEach(element => {
-        document.getElementById(element).classList.add('d-none');
+        // document.getElementById(element).classList.add('d-none');
+        document.getElementById(element).style.display='none';
     });
 }

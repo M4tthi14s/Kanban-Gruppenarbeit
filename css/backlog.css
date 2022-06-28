@@ -1,5 +1,12 @@
 .backlog {
+    display: none;
+    flex-direction: column;
     width: 100%;
+}
+
+.backlog h2 {
+    font-size: 16px;
+    margin: 16px;
 }
 
 .headlineBacklog {
@@ -9,9 +16,11 @@
 
 .task {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
     border: 1px solid black;
 }
 
-.btnBacklog{
+.btnBacklog {
     cursor: pointer;
 }
