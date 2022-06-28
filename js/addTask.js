@@ -15,11 +15,13 @@ async function init() {
  * adds tasks in array
  */
 async function addTask() {
+    let title = document.getElementById('title').value;
     let description = document.getElementById('description').value;
     let category = document.getElementById('category').value;
     let urgency = document.getElementById('urgency').value;
 
     let task = {
+        'title': title,
         'names': names,
         'description': description,
         'category': category,
