@@ -14,6 +14,9 @@ function backlogList() {
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, praesentium dolores iure nesciunt consectetur
                     veniam, sapiente impedit ipsa enim doloribus fuga eos nostrum blanditiis labore ipsum, qui perferendis aliquam
                     cupiditate.</p>
+                <button class="btnBacklog" onclick="taskPushToBoard(${i})">
+                    TO BOARD
+                </button>
             </div>
             `;
     };
