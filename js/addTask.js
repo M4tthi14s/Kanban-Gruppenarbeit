@@ -19,6 +19,7 @@ async function addTask() {
     let category = document.getElementById('category').value;
 
     let task = {
+        'names': names,
         'description': description,
         'category': category,
         'createAt': new Date().getTime()
@@ -26,9 +27,16 @@ async function addTask() {
 
     allTasksArray.push(task);
     await backend.setItem('allTasksArray', JSON.stringify(allTasksArray));
+
+    console.log(task);
 }
 
-avatarArray = ['Bob','Lisa','Mili','Ron','Ula','Wolf'];
+let avatarArray = ['Bob', 'Lisa', 'Mili', 'Ron', 'Ula', 'Wolf'];
+let names = [];
+
+function avatarSelect(index) {
+    names = avatarArray[index];
+}
 
 function renderAvatar() {
     let avatar = document.getElementById('renderAvatar');
@@ -36,7 +44,7 @@ function renderAvatar() {
     for (let i = 0; i < avatarArray.length; i++) {
         avatar.innerHTML +=
             `
-            <a href="#" onclick="avatarSelect()"><img src="../img/profile_${avatarArray[i]}.png"></a>
+            <a href="#" onclick="avatarSelect(${i})"><img src="../img/profile_${avatarArray[i]}.png"></a>
             `;
     }
 }
