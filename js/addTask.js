@@ -1,17 +1,14 @@
 setURL('https://sebastian-gamroth.developerakademie.net/smallest_backend_ever-master/');
 
-let users = [{}];
+let allTasksArray = [{}];
 
 async function init() {
     await downloadFromServer();
-    users = JSON.parse(backend.getItem('users')) || [];
+    allTasksArray = JSON.parse(backend.getItem('allTasksArray')) || [];
 
-    // addTask();
-    loadAllTasks();
     backlogList();
 }
 
-let allTasks = [];
 
 /**
  * adds tasks in array
@@ -26,18 +23,6 @@ async function addTask() {
         'createAt': new Date().getTime()
     };
 
-    allTasks.push(task);
-
-    users.push(task);
-    await backend.setItem('users', JSON.stringify(users));
-}
-
-
-/**
- * loads all tasks
- * @param {String} email - test
- */
-function loadAllTasks() {
-
-    allTasks.push(users);
+    allTasksArray.push(task);
+    await backend.setItem('allTasksArray', JSON.stringify(allTasksArray));
 }
