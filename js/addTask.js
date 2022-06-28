@@ -17,11 +17,13 @@ async function init() {
 async function addTask() {
     let description = document.getElementById('description').value;
     let category = document.getElementById('category').value;
+    let urgency = document.getElementById('urgency').value;
 
     let task = {
         'names': names,
         'description': description,
         'category': category,
+        'urgency': urgency,
         'createAt': new Date().getTime()
     };
 
@@ -48,3 +50,4 @@ function renderAvatar() {
             `;
     }
 }
+
