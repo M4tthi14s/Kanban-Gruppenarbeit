@@ -51,3 +51,6 @@ function renderAvatar() {
     }
 }
 
+setTimeout(() => {
+    document.getElementById('datePicker').value = '2020-05-20'
+},10);
