@@ -1,4 +1,6 @@
 .backlog {
+    display: none;
+    flex-direction: column;
     width: 100%;
 }
 

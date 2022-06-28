@@ -1,3 +1,9 @@
+.board {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+
 h2 {
     margin-left: 92px;
     margin-right: 92px;
