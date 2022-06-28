@@ -10,7 +10,7 @@
     background-color: #1e3190;
 }
 
-.navMenuLogo{
+.navMenuLogo {
     height: 40px;
     margin-left: 16px;
 }
@@ -18,4 +18,21 @@
 .menuLink {
     color: white;
     text-decoration: none;
+    margin: 0px 16px;
+}
+
+.navBarImg {
+    width: 32px;
+    height: 32px;
+    background: #c5c5c5;
+    border-radius: 6px;
+    margin-right: 16px;
+}
+
+.regulations {
+    display: flex;
+}
+
+.d-none {
+    display: none;
 }

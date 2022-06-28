@@ -3,6 +3,10 @@ body {
     font-family: 'PT Sans';
 }
 
+h2{
+    color: rgb(35 35 35);
+}
+
 .distributor {
     display: flex;
     margin-top: 80px;

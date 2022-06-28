@@ -9,14 +9,19 @@ function menuLink(index) {
 
 
 function showLink(index) {
-    // document.getElementById(index).classList.remove('d-none');
-    document.getElementById(index).style.display='flex';
+    document.getElementById(index).style.display = 'flex';
 }
 
 
 function hideLink(menuLinkArray) {
     menuLinkArray.forEach(element => {
-        // document.getElementById(element).classList.add('d-none');
-        document.getElementById(element).style.display='none';
+        document.getElementById(element).style.display = 'none';
     });
+}
+
+
+function navBar() {
+    document.getElementById('regulations').classList.toggle('d-none');
+    document.getElementById('menuSelection').classList.toggle('d-none');
+    document.getElementById('searchTitle').classList.toggle('d-none');
 }

@@ -1,12 +1,23 @@
 <div class="navMenu">
     <a class="menuLink" onclick="menuLink('headlineBody')" href="#"><img class="navMenuLogo" src="../img/logo.png"></a>
 
-    <a class="menuLink" onclick="menuLink('board')" href="#">Board</a>
-    <a class="menuLink" onclick="menuLink('backlog')" href="#">Backlog</a>
-    <a class="menuLink" onclick="menuLink('addTask')" href="#">Add Task</a>
-    <a class="menuLink" onclick="menuLink('howTo')" href="#">Help</a>
+    <div class="menuSelection" id="menuSelection">
+        <a class="menuLink" onclick="menuLink('board')" href="#">Board</a>
+        <a class="menuLink" onclick="menuLink('backlog')" href="#">Backlog</a>
+        <a class="menuLink" onclick="menuLink('addTask')" href="#">Add Task</a>
+        <a class="menuLink" onclick="menuLink('howTo')" href="#">Help</a>
+    </div>
 
-    <a class="menuLink" onclick="menuLink('copyright')" href="#">Urheberrechte</a>
-    <a class="menuLink" onclick="menuLink('imprint')" href="#">Impressum</a>
-    <a class="menuLink" onclick="menuLink('privacy')" href="#">Datenschutzerklärung</a>
+    <input id="searchTitle" type="text" placeholder="Search Title">
+
+    <div class="regulations d-none" id="regulations">
+        <a class="menuLink" onclick="menuLink('copyright')" href="#">Urheberrechte</a>
+        <a class="menuLink" onclick="menuLink('imprint')" href="#">Impressum</a>
+        <a class="menuLink" onclick="menuLink('privacy')" href="#">Datenschutzerklärung</a>
+    </div>
+
+    <a onclick="navBar()" href="#"><img class="navBarImg" src="../img/Menu.svg"></a>
+
+
+
 </div>

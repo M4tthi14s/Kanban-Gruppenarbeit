@@ -1,6 +1,7 @@
 .backlog {
     display: none;
     flex-direction: column;
+    margin: 16px;
     width: 100%;
 }
 
@@ -18,9 +19,22 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    border: 1px solid black;
+    height: 60px;
+    border: 1px solid #767676;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.task h2 {
+    margin: 8px;
 }
 
 .btnBacklog {
     cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #1e3190;
+    color: white;
+    margin: 1px;
 }
