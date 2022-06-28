@@ -8,6 +8,7 @@ async function init() {
 
     renderAvatar();
     backlogList();
+    // setTimeout();
 }
 
 
@@ -53,6 +54,6 @@ function renderAvatar() {
     }
 }
 
-setTimeout(() => {
-    document.getElementById('datePicker').value = '2020-05-20'
-},10);
+// setTimeout(() => {
+//     document.getElementById('datePicker').value = '2020-05-20'
+// },10);
