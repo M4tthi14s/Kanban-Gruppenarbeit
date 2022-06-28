@@ -23,10 +23,12 @@ function backlogList() {
     };
 }
 
-function taskPushToBoard(id) {
+async function taskPushToBoard(id) {
     allTasksArray[id].backlog = false;
-    document.getElementById('task_' + id).innerHTML = "";
+    let element = document.getElementById('task_' + id);
+    element.parentNode.removeChild(element);
 
+    await backend.setItem('allTasksArray', JSON.stringify(allTasksArray));
 }
 
 // function deleteUser(name) {
