@@ -27,7 +27,8 @@ async function addTask() {
         'description': description,
         'category': category,
         'urgency': urgency,
-        'createAt': new Date().getTime()
+        'createAt': new Date().getTime(),
+        'backlog': true
     };
 
     allTasksArray.push(task);
