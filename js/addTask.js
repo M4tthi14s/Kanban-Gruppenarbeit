@@ -17,18 +17,28 @@ async function init() {
 async function addTask() {
     let description = document.getElementById('description').value;
     let category = document.getElementById('category').value;
+    let urgency = document.getElementById('urgency').value;
 
     let task = {
+        'names': names,
         'description': description,
         'category': category,
+        'urgency': urgency,
         'createAt': new Date().getTime()
     };
 
     allTasksArray.push(task);
     await backend.setItem('allTasksArray', JSON.stringify(allTasksArray));
+
+    console.log(task);
 }
 
-avatarArray = ['Bob','Lisa','Mili','Ron','Ula','Wolf'];
+let avatarArray = ['Bob', 'Lisa', 'Mili', 'Ron', 'Ula', 'Wolf'];
+let names = [];
+
+function avatarSelect(index) {
+    names = avatarArray[index];
+}
 
 function renderAvatar() {
     let avatar = document.getElementById('renderAvatar');
@@ -36,7 +46,8 @@ function renderAvatar() {
     for (let i = 0; i < avatarArray.length; i++) {
         avatar.innerHTML +=
             `
-            <a href="#" onclick="avatarSelect()"><img src="../img/profile_${avatarArray[i]}.png"></a>
+            <a href="#" onclick="avatarSelect(${i})"><img src="../img/profile_${avatarArray[i]}.png"></a>
             `;
     }
 }
+
