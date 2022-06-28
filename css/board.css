@@ -1,0 +1,8 @@
+.board {
+    width: 100%;
+}
+
+.headlineBoard {
+    display: flex;
+    justify-content: space-evenly;
+}
