@@ -9,9 +9,9 @@ function backlogList() {
                 `
             <div class="task" id="task_${i}">
                 <div class="backlogTitle">
-                    <img class="backlogImg" src="../img/profile_${allTasksArray[i].names}.png">
+                    <img class="backlogImg" src="../img/${allTasksArray[i].names}.png">
                     <div>
-                        <h2>${allTasksArray[i].names}</h2>
+                        <h2>${allTasksArray[i].names.replace('_', ' ')}</h2>
                         <h2>${allTasksArray[i].title}</h2>
                     </div>
                 </div>

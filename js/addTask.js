@@ -56,7 +56,7 @@ async function addTask() {
     init();
 }
 
-let avatarArray = ['Bob Marley', 'Lisa Brennon', 'Mili Vanilli', 'Ron Stevens', 'Ula Kockambrink', 'Wolf Belford'];
+let avatarArray = ['Bob_Marley', 'Lisa_Brennon', 'Mili_Vanilli', 'Ron_Stevens', 'Ula_Kockambrink', 'Wolf_Belford'];
 let names = [];
 
 function avatarSelect(index) {
@@ -69,7 +69,7 @@ function renderAvatar() {
     for (let i = 0; i < avatarArray.length; i++) {
         avatar.innerHTML +=
             `
-            <a href="#" onclick="avatarSelect(${i})"><img src="../img/profile_${avatarArray[i]}.png"></a>
+            <a href="#" onclick="avatarSelect(${i})"><img src="../img/${avatarArray[i]}.png"></a>
             `;
     }
 }
