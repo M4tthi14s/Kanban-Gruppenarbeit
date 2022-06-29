@@ -25,5 +25,6 @@ function hideLink(menuLinkArray) {
 function navBar() {
     document.getElementById('regulations').classList.toggle('d-none');
     document.getElementById('menuSelection').classList.toggle('d-none');
-    document.getElementById('searchTitle').classList.toggle('d-none');
+    document.getElementById('hideSearchTitle').classList.toggle('d-none');
+    document.getElementById('hidePaperBin').classList.toggle('d-none');
 }
