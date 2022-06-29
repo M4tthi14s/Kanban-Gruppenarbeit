@@ -8,12 +8,14 @@ function renderToDo() {
                 `
         <div class="note" id="task_${i}"
             <div>
+            <h2>${allTasksArray[i].title}</h2>
                 <h2>${allTasksArray[i].names}</h2>
-                <h2>${allTasksArray[i].title}</h2>
+                
+                <h2 id="task_${i}">${allTasksArray[i].category}</h2>
+                <p>${allTasksArray[i].description}</p>
             </div>
         </div>
-        <h2 id="task_${i}">${allTasksArray[i].category}</h2>
-        <p>${allTasksArray[i].description}</p>
+   
         `
         }
     }
