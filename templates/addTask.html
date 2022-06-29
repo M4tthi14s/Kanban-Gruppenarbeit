@@ -1,20 +1,21 @@
 <h1>Task Management</h1>
 
-<input id="title" placeholder="Management meeting preparation">
-<input id="datePicker" type="date" min="2022-28-06">
+<!-- <form onsubmit="formValidationAddTask(); return false"> -->
+    <input required id="title" placeholder="Management meeting preparation">
+    <input  id="datePicker" type="date" min="2022-28-06">
 
-<select id="category" placeholder="Management">
-    <option>Marketing</option>
-    <option>Development</option>
-    <option>Design</option>
-</select>
-<select id="urgency" placeholder="urgency">
-    <option>High</option>
-    <option>Normal</option>
-    <option>Low</option>
-</select>
+    <select  id="category" placeholder="Management">
+        <option>Marketing</option>
+        <option>Development</option>
+        <option>Design</option>
+    </select>
+    <select  id="urgency" placeholder="urgency">
+        <option>High</option>
+        <option>Normal</option>
+        <option>Low</option>
+    </select>
 
-<input id="description" placeholder="Aufgabe">
-<div class="avatarAddTask" id="renderAvatar"></div>
-<button onclick="addTask()">Hinzufügen</button>
-
+    <input  id="description" placeholder="Aufgabe">
+    <div class="avatarAddTask" id="renderAvatar"></div>
+    <button onclick="addTask()">Hinzufügen</button>
+<!-- </form> -->

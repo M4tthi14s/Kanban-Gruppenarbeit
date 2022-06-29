@@ -12,24 +12,43 @@ async function init() {
 }
 
 
+function formValidationAddTask() {
+    addTask();
+}
+
 /**
  * adds tasks in array
  */
 async function addTask() {
-    let title = document.getElementById('title').value;
-    let description = document.getElementById('description').value;
+    let title = document.getElementById('title');
+    let description = document.getElementById('description');
     let category = document.getElementById('category').value;
     let urgency = document.getElementById('urgency').value;
 
-    let task = {
-        'title': title,
+
+    let task = {   // <-- wenn sich das array nennt..
+
+
+
+
+
+        'title': title.value, // <-- wie nennt sich das hier ? 
+
+
+
+
+        
         'names': names,
-        'description': description,
+        'description': description.value,
         'category': category,
         'urgency': urgency,
         'createAt': new Date().getTime(),
         'backlog': true
     };
+
+
+    title.value = '';
+    description.value = '';
 
     allTasksArray.push(task);
     await backend.setItem('allTasksArray', JSON.stringify(allTasksArray));
@@ -37,7 +56,7 @@ async function addTask() {
     init();
 }
 
-let avatarArray = ['Bob', 'Lisa', 'Mili', 'Ron', 'Ula', 'Wolf'];
+let avatarArray = ['Bob Marley', 'Lisa Brennon', 'Mili Vanilli', 'Ron Stevens', 'Ula Kockambrink', 'Wolf Belford'];
 let names = [];
 
 function avatarSelect(index) {
@@ -54,6 +73,19 @@ function renderAvatar() {
             `;
     }
 }
+
+
+function dateFormatDE(index) {
+    let options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+    let date = new Date(index);
+    date = date.toLocaleDateString('de-DE', options);
+    return date;
+}
+
+
+
+
+
 
 // setTimeout(() => {
 //     document.getElementById('datePicker').value = '2020-05-20'
