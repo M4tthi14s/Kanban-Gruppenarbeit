@@ -27,31 +27,31 @@ async function addTask() {
     // if (ifValidation == blue) {
     //     console.log(ifValidation)
 
-    //     let title = document.getElementById('title');
-    //     let description = document.getElementById('description');
-    //     let category = document.getElementById('category').value;
-    //     let urgency = document.getElementById('urgency').value;
+        let title = document.getElementById('title');
+        let description = document.getElementById('description');
+        let category = document.getElementById('category').value;
+        let urgency = document.getElementById('urgency').value;
 
-    //     let task = {
+        let task = {
 
-    //         'title': title.value,
-    //         'names': names,
-    //         'description': description.value,
-    //         'category': category,
-    //         'urgency': urgency,
-    //         'createAt': dateFormatDE(),
-    //         'backlog': true
-    //     };
+            'title': title.value,
+            'names': names,
+            'description': description.value,
+            'category': category,
+            'urgency': urgency,
+            'createAt': dateFormatDE(),
+            'backlog': true
+        };
 
-    //     title.value = '';
-    //     description.value = '';
+        title.value = '';
+        description.value = '';
 
-    //     allTasksArray.push(task);
-    //     await backend.setItem('allTasksArray', JSON.stringify(allTasksArray));
+        allTasksArray.push(task);
+        await backend.setItem('allTasksArray', JSON.stringify(allTasksArray));
 
-    //     init();
+        init();
 
-    //     ifValidation = false;
+        ifValidation = false;
     // }
 }
 
