@@ -10,23 +10,15 @@ async function init() {
     backlogList();
 }
 
-let ifValidation = false;
 
 function formValidationAddTask() {
-    ifValidation = true;
-    console.log(ifValidation)
+    addTask();
 }
 
 /**
  * adds tasks in array
  */
 async function addTask() {
-    if (ifValidation == true) {console.log('true');ifValidation = false;}
-    if (ifValidation == true) {console.log('false')}
-
-    // if (ifValidation == blue) {
-    //     console.log(ifValidation)
-
         let title = document.getElementById('title');
         let description = document.getElementById('description');
         let category = document.getElementById('category').value;
@@ -50,9 +42,6 @@ async function addTask() {
         await backend.setItem('allTasksArray', JSON.stringify(allTasksArray));
 
         init();
-
-        ifValidation = false;
-    // }
 }
 
 

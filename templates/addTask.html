@@ -3,7 +3,7 @@
 <form class="addTaskForm" onsubmit="formValidationAddTask(); return false">
 
     <input required id="title" placeholder="Management meeting preparation">
-    <input  id="datePicker" type="date" min="2022-28-06">
+    <input required id="datePicker" type="date" min="2022-28-06">
 
     <select  id="category" placeholder="Management">
         <option>Marketing</option>
@@ -18,6 +18,6 @@
 
     <input required id="description" placeholder="Aufgabe">
     <div class="avatarAddTask" id="renderAvatar"></div>
-    <button onclick="addTask()">Hinzufügen</button>
+    <button onkeyup="addTask()">Hinzufügen</button>
 
 </form>
