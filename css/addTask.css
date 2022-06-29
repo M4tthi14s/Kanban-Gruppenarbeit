@@ -3,10 +3,63 @@
     flex-direction: column;
 }
 
+.addTaskForm h2{
+    font-size: 16px;
+    color: #1e3190;
+}
+
 .addTaskForm {
     display: flex;
     flex-direction: column;
+    width: 400px;
+    background-color: #f4f3fb;
+    border-radius: 8px;
+    padding: 16px;
 }
+
+.addTaskTitle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.addTaskTitle input {
+    width: 180px;
+    height: 30px;
+}
+
+.addTaskTitle h2,
+.addTaskCategory h2,
+.description h2 {
+    text-align: left;
+    margin: 0px;
+}
+
+.dueDate {
+    margin-left: 16px;
+}
+
+.addTaskCategory {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.addTaskCategory select {
+    width: 180px;
+    height: 30px;
+}
+
+.description {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.avatarContainer{
+    margin-left: 16px;
+}
+
+
 
 .avatarAddTask img {
     width: 32px;
