@@ -8,6 +8,11 @@ async function init() {
 
     renderAvatar();
     backlogList();
+<<<<<<< HEAD
+    renderToDo();
+    // setTimeout();
+=======
+>>>>>>> dd947c9c4636751facd81a37e2e51c33950c8c48
 }
 
 
