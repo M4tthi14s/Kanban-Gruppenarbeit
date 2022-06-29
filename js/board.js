@@ -15,25 +15,12 @@ function renderToDo(){
         <h2 id="task_${i}">${allTasksArray[i].category}</h2>
         <p>${allTasksArray[i].description}</p>
         `
-
-
-
        }
        
        }
         
 
     }
-
-
-
-
-
-
-
-
-
-
 
 let currentDraggedElement;
 
