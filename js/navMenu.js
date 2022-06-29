@@ -9,14 +9,22 @@ function menuLink(index) {
 
 
 function showLink(index) {
-    // document.getElementById(index).classList.remove('d-none');
-    document.getElementById(index).style.display='flex';
+    document.getElementById(index).style.display = 'flex';
+    if (index == 'board' || index == 'backlog') { document.getElementById('searchTitle').style.display = 'flex'; }
+    else { document.getElementById('searchTitle').style.display = 'none'; }
+    if (index == 'board') { document.getElementById('paperBin').style.display = 'flex'; }
+    else { document.getElementById('paperBin').style.display = 'none'; }
 }
 
 
 function hideLink(menuLinkArray) {
-    menuLinkArray.forEach(element => {
-        // document.getElementById(element).classList.add('d-none');
-        document.getElementById(element).style.display='none';
-    });
+    menuLinkArray.forEach(element => { document.getElementById(element).style.display = 'none'; });
+}
+
+
+function navBar() {
+    document.getElementById('regulations').classList.toggle('d-none');
+    document.getElementById('menuSelection').classList.toggle('d-none');
+    document.getElementById('hideSearchTitle').classList.toggle('d-none');
+    document.getElementById('hidePaperBin').classList.toggle('d-none');
 }
