@@ -3,6 +3,11 @@
     flex-direction: column;
 }
 
+.addTaskForm {
+    display: flex;
+    flex-direction: column;
+}
+
 .avatarAddTask img {
     width: 32px;
     height: 32px;
