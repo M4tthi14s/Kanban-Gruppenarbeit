@@ -8,6 +8,7 @@ function backlogList() {
             task.innerHTML +=
                 `
             <div class="task" id="task_${i}">
+                <img class="backlogImg" src="../img/profile_${allTasksArray[i].names}.png">
                 <div>
                     <h2>${allTasksArray[i].names}</h2>
                     <h2>${allTasksArray[i].title}</h2>
