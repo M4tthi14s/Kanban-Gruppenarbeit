@@ -2,24 +2,53 @@
 
 <form class="addTaskForm" onsubmit="formValidationAddTask(); return false">
 
-    <input required id="title" placeholder="Title...">
-    <input required id="datePicker" type="date" min="2022-28-06">
+    <div class="addTaskTitle">
+        <div class="title">
+            <h2>TITLE</h2>
+            <input required id="title" placeholder="Title...">
+            <!-- <input required id="title" placeholder="Management meeting preparation"> -->
+        </div>
+        <div class="dueDate">
+            <h2>DUE DATE</h2>
+            <input required id="datePicker" type="date" min="2022-28-06">
+        </div>
+    </div>
 
-    <select  id="category" placeholder="Management">
-        <option>Marketing</option>
-        <option>Development</option>
-        <option>Design</option>
-    </select>
-    <select  id="urgency" placeholder="urgency">
-        <option>High</option>
-        <option>Normal</option>
-        <option>Low</option>
-    </select>
+    <div class="addTaskCategory">
+        <div class="category">
+            <h2>CATEGORY</h2>
+            <select id="category" placeholder="Management">
+                <option>Marketing</option>
+                <option>Development</option>
+                <option>Design</option>
+            </select>
+        </div>
+        <div class="urgency">
+            <h2>URGENCY</h2>
+            <select id="urgency" placeholder="urgency">
+                <option>High</option>
+                <option>Normal</option>
+                <option>Low</option>
+            </select>
+        </div>
+    </div>
 
-    <input required id="description" placeholder="Aufgabe">
-    <div class="avatarAddTask" id="renderAvatar"></div>
-    <button onkeyup="addTask()">Hinzufügen</button>
+    <div class="description">
+        <div class="descriptionBox">
+            <h2>DESCRIPTION</h2>
+            <input required id="description" placeholder="Aufgabe">
+        </div>
+        <div class="avatarContainer">
+            <h2>ASSIGNED TO</h2>
+            <div class="avatarAddTask" id="renderAvatar"></div>
+            <button onkeyup="addTask()">Hinzufügen</button>
+        </div>
+    </div>
 
+<<<<<<< HEAD
 </form>
 
 
+=======
+</form>
+>>>>>>> e780bfc841a4e30c3531f46383d8a770680b8b38
