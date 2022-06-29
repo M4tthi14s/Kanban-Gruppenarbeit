@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     font-family: 'PT Sans';
@@ -16,3 +17,7 @@ h2{
 /* .d-none{
     display: none;
 } */
+
+.note{
+    background-color: brown;
+}
