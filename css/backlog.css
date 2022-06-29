@@ -10,6 +10,12 @@
     margin: 16px;
 }
 
+.backlogTitle{
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+}
+
 .headlineBacklog {
     display: flex;
     justify-content: space-evenly;
