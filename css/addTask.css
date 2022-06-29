@@ -3,7 +3,7 @@
     flex-direction: column;
 }
 
-.addTaskForm h2{
+.addTaskForm h2 {
     font-size: 16px;
     color: #1e3190;
 }
@@ -23,8 +23,11 @@
 }
 
 .addTaskTitle input {
-    width: 180px;
-    height: 30px;
+    width: 178px;
+    height: 28px;
+    border: 1px solid #8b8b8b;
+    border-radius: 3px;
+    padding: 0px;
 }
 
 .addTaskTitle h2,
@@ -47,6 +50,9 @@
 .addTaskCategory select {
     width: 180px;
     height: 30px;
+    border: 1px solid #8b8b8b;
+    border-radius: 3px;
+    background-color: white;
 }
 
 .description {
@@ -55,8 +61,20 @@
     margin-top: 16px;
 }
 
-.avatarContainer{
+.description input{
+    width: 178px;
+    height: 80px;
+    border: 1px solid #8b8b8b;
+    border-radius: 3px;
+    padding: 0px;
+}
+
+.avatarContainer {
     margin-left: 16px;
+}
+
+.avatarContainer {
+    width: 180px;
 }
 
 
