@@ -8,7 +8,7 @@ async function init() {
 
     renderAvatar();
     backlogList();
-    renderToDo();
+    // renderToDo();
     // setTimeout();
 }
 
