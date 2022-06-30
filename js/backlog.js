@@ -19,12 +19,12 @@ function backlogList() {
             </div>
             `;
         }
-        renderAvatarPic(i);
+        renderAvatarPicTrue(i);
     };
 }
 
 
-function renderAvatarPic(i) {
+function renderAvatarPicTrue(i) {
     if (allTasksArray[i].backlog == true) {
 
         for (let j = 0; j < allTasksArray[i].names.length; j++) {
@@ -35,7 +35,6 @@ function renderAvatarPic(i) {
                     <h2>${allTasksArray[i].names[j].replace('_', ' ')}</h2>
                 </div>`;
         }
-
     }
 }
 
