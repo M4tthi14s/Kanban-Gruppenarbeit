@@ -6,21 +6,20 @@ function renderToDo() {
         if (allTasksArray[i].backlog == false) {
             toDo.innerHTML +=
                 `
-        <div class="note" id="task_${i}"
-            <div>
-            <h2>${allTasksArray[i].title}</h2>
-                <h2>${allTasksArray[i].names}</h2>
-                <div>
-                    <img src="../img/${i}.png">
-                        </div>
-                
-                <h2 id="task_${i}">${allTasksArray[i].category}</h2>
-                <p>${allTasksArray[i].description}</p>
-                <button onclick="deleteNote()" >Löschen</button>
+                <div id="toDO">
+                <div draggable="true" class="note" id="task_${i}"
+                     <h2>${allTasksArray[i].title}</h2>
+                         <h2>${allTasksArray[i].names}</h2>
+                            <div>
+                                <img src="../img/${i}.png">
+                            </div>
+                    
+                    <h2 id="task_${i}">${allTasksArray[i].category}</h2>
+                    <p>${allTasksArray[i].description}</p>
+                    <button onclick="deleteNote(${i})" >Löschen</button>
+                </div>
+               
             </div>
-           
-        </div>
-   
         `
         }
     }
@@ -106,9 +105,9 @@ function moveTo(category) {
 //aus Array löschen//
 
 function deleteNote(position){
-    allTaskArray.splice(position,1)
+    allTasksArray.splice(position,1)
 
 
- renderToDo();
+ renderToDo(i);
 
 }
