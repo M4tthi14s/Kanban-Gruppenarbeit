@@ -8,13 +8,9 @@ function backlogList() {
             task.innerHTML +=
                 `
             <div class="task" id="task_${i}">
-                <div class="backlogTitle">
-                    <img class="backlogImg" src="../img/${allTasksArray[i].names}.png">
-                    <div>
-                        <h2>${allTasksArray[i].names.replace('_', ' ')}</h2>
-                        <h2>${allTasksArray[i].title}</h2>
-                    </div>
-                </div>
+                <div id="backlogAvatar_${i}" class="backlogTitle"></div>
+                <div id="backlogNames_${i}"><h2>${allTasksArray[i].title}</h2></div>
+
                 <h2 id="task_${i}">${allTasksArray[i].category}</h2>
                 <p>${allTasksArray[i].description}</p>
                 <button class="btnBacklog" onclick="taskPushToBoard(${i})">
@@ -23,8 +19,26 @@ function backlogList() {
             </div>
             `;
         }
+        renderAvatarPic(i);
     };
 }
+
+
+function renderAvatarPic(i) {
+    if (allTasksArray[i].backlog == true) {
+
+        for (let j = 0; j < allTasksArray[i].names.length; j++) {
+
+            document.getElementById('backlogAvatar_' + i).innerHTML +=
+                `<div class="avatarPicTitle">
+                    <img class="backlogImg" src="../img/${allTasksArray[i].names[j]}.png">
+                    <h2>${allTasksArray[i].names[j].replace('_', ' ')}</h2>
+                </div>`;
+        }
+
+    }
+}
+
 
 async function taskPushToBoard(id) {
     allTasksArray[id].backlog = false;
@@ -33,7 +47,3 @@ async function taskPushToBoard(id) {
 
     await backend.setItem('allTasksArray', JSON.stringify(allTasksArray));
 }
-
-// function deleteUser(name) {
-//     backend.deleteItem('users');
-//   }
