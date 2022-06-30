@@ -105,14 +105,7 @@ function removeHighlight(id) {
 
 
 function deleteNote(position) {
-
-    // let index = 'trash';
-    // // allTasksArray.splice(position, 1, 'trash');
-    // allTasksArray.splice(position, 1, index);
-    console.log(position)
-    let index = 'trash';
-
-    moveTo(index);
-
-    // updateHTML();
+    let index = "trash";
+     allTasksArray[position]['board'] = index;
+    updateHTML();
 }

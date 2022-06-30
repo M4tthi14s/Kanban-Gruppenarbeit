@@ -36,7 +36,6 @@ async function addTask() {
     }
 
     let task = {
-
         'title': title.value,
         'names': names,
         'description': description.value,
