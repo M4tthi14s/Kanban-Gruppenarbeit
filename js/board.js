@@ -1,9 +1,9 @@
 function generateTodoHTML(element) {
     return `
-            <div draggable="true" ondragstart="startDragging(${element['id']})" class="todo">${element['title']}
+            <div draggable="true" ondragstart="startDragging(${element['id']})" class="todo">
                 <div id="toDoTask_${element['id']}">
                     <div draggable="true" class="note" id="task_${element['id']}">
-                        <h2>${element['title']}</h2>
+                        <h2>Title: ${element['title']}</h2>
                         <div id="backlogAvatar_${element['id']}"></div>
 
                         <h2 id="task_${element['id']}">${element['category']}</h2>
@@ -91,6 +91,7 @@ function allowDrop(ev) {
 function moveTo(board) {
     allTasksArray[currentDraggedElement]['board'] = board;
     updateHTML();
+    pushToServer();
 }
 
 
@@ -108,4 +109,10 @@ function deleteNote(position) {
     let index = "trash";
      allTasksArray[position]['board'] = index;
     updateHTML();
+    pushToServer();
+}
+
+
+async function pushToServer() {
+    await backend.setItem('allTasksArray', JSON.stringify(allTasksArray));
 }

@@ -5,8 +5,7 @@
 }
 
 .section-two h2 {
-    /* margin-left: 92px;
-    margin-right: 92px; */
+    font-size: 16px;
 }
 
 .headlineBoard {
@@ -23,16 +22,16 @@
     margin: 16px;
 }
 
-.note {
+/* .note {
     background-color: beige;
     border: 1px solid black;
     margin-bottom: 6px;
-}
+} */
 
 .column {
     width: 150px;
     background-color: rgb(224, 224, 224);
-    height: 500px;
+    height: 100%;
 }
 
 .note h2 {
@@ -44,6 +43,9 @@
     border: 1px solid black;
     cursor: pointer;
     background-color: rgb(255, 255, 255);
+    margin-bottom: 8px;
+    padding: 8px;
+    border-radius: 4px;
 }
 
 .box_Highlight{
