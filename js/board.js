@@ -1,9 +1,5 @@
 function generateTodoHTML(element) {
 
-    // let toDo = document.getElementById('toDo');
-    // toDo.innerHTML = '';
-
-    // if (element['backlog'] == false) {
     return `
             <div draggable="true" ondragstart="startDragging(${element['id']})" class="todo">${element['title']}
                 <div id="toDoTask_${element['id']}">
@@ -18,8 +14,6 @@ function generateTodoHTML(element) {
                 </div>
             </div>
             `
-    // }
-    // renderAvatarPicFalse(element['id']);
 }
 
 
@@ -37,20 +31,6 @@ function renderAvatarPicFalse(i) {
     }
 }
 
-// function renderAvatarPicFalse(i) {
-//     if (allTasksArray[i].backlog == false) {
-
-//         for (let j = 0; j < allTasksArray[i].names.length; j++) {
-
-//             document.getElementById('backlogAvatar_' + i).innerHTML +=
-//                 `<div class="avatarPicTitle">
-//                     <img class="backlogImg" src="../img/${allTasksArray[i].names[j]}.png">
-//                     <h2>${allTasksArray[i].names[j].replace('_', ' ')}</h2>
-//                 </div>`;
-//         }
-//     }
-// }
-
 
 function updateHTML() {
 
@@ -59,7 +39,7 @@ function updateHTML() {
     for (let index = 0; index < toDo.length; index++) {
         const element = toDo[index];
         document.getElementById('toDo').innerHTML += generateTodoHTML(element);
-        // renderAvatarPicFalse();
+        renderAvatarPicFalse(element['id']);
     }
 
     let inProgress = allTasksArray.filter(t => t['board'] == 'inProgress');
@@ -67,6 +47,7 @@ function updateHTML() {
     for (let index = 0; index < inProgress.length; index++) {
         const element = inProgress[index];
         document.getElementById('inProgress').innerHTML += generateTodoHTML(element);
+        renderAvatarPicFalse(element['id']);
     }
 
     let testing = allTasksArray.filter(t => t['board'] == 'testing');
@@ -74,6 +55,7 @@ function updateHTML() {
     for (let index = 0; index < testing.length; index++) {
         const element = testing[index];
         document.getElementById('testing').innerHTML += generateTodoHTML(element);
+        renderAvatarPicFalse(element['id']);
     }
 
     let done = allTasksArray.filter(t => t['board'] == 'done');
@@ -81,6 +63,7 @@ function updateHTML() {
     for (let index = 0; index < done.length; index++) {
         const element = done[index];
         document.getElementById('done').innerHTML += generateTodoHTML(element);
+        renderAvatarPicFalse(element['id']);
     }
 
     let trash = allTasksArray.filter(t => t['board'] == 'trash');
@@ -88,14 +71,11 @@ function updateHTML() {
     for (let index = 0; index < trash.length; index++) {
         const element = trash[index];
         document.getElementById('trash').innerHTML += generateTodoHTML(element);
+        renderAvatarPicFalse(element['id']);
     }
 }
 
 let currentDraggedElement;
-
-// function generateTodoHTML(element) {
-//     return `<div draggable="true" ondragstart="startDragging(${element['id']})" class="todo">${element['title']}</div>`;
-// }
 
 
 function startDragging(id) {
