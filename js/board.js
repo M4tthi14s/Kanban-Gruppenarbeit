@@ -37,6 +37,10 @@ function renderAvatarPicFalse(i) {
     }
 }
 
+<<<<<<< HEAD
+function renderAvatarPic(i) {
+    if (allTasksArray[i].backlog == true) {
+=======
 {/* <div>
 <img src="../img/${i}.png">
 </div> */}
@@ -46,18 +50,19 @@ function renderAvatarPicFalse(i) {
 
 // function renderAvatarPic(i) {
 //     if (allTasksArray[i].backlog == true) {
+>>>>>>> e1d12966179d299a3cb7642452794f22c5a66afc
 
-//         for (let j = 0; j < allTasksArray[i].names.length; j++) {
+        for (let j = 0; j < allTasksArray[i].names.length; j++) {
 
-//             document.getElementById('backlogAvatar_' + i).innerHTML +=
-//                 `<div class="avatarPicTitle">
-//                     <img class="backlogImg" src="../img/${allTasksArray[i].names[j]}.png">
-//                     <h2>${allTasksArray[i].names[j].replace('_', ' ')}</h2>
-//                 </div>`;
-//         }
+            document.getElementById('backlogAvatar_' + i).innerHTML +=
+                `<div class="avatarPicTitle">
+                    <img class="backlogImg" src="../img/${allTasksArray[i].names[j]}.png">
+                    <h2>${allTasksArray[i].names[j].replace('_', ' ')}</h2>
+                </div>`;
+        }
 
-//     }
-// }
+    }
+}
 
 
 
