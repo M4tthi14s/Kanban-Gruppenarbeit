@@ -26,6 +26,18 @@ async function addTask() {
     let category = document.getElementById('category').value;
     let urgency = document.getElementById('urgency').value;
 
+
+    let id;
+    if (!allTasksArray[1]) { id = 1 }
+    else {
+        let number = allTasksArray.length;
+        number = number-1;
+        let index = allTasksArray[number].id
+        id = (index) + 1;
+        console.log(number)
+        console.log(id)
+    }
+
     let task = {
 
         'title': title.value,
@@ -34,7 +46,8 @@ async function addTask() {
         'category': category,
         'urgency': urgency,
         'createAt': dateFormatDE(),
-        'backlog': true
+        'backlog': true,
+        'id': id
     };
 
     title.value = '';
@@ -97,30 +110,3 @@ function dateFormatDE() {
     date = date.toLocaleDateString('de-DE', options);
     return date;
 }
-
-
-
-
-// $(document).ready(function () {
-//     var checkbox_round = $('.checkbox_round');
-//     checkbox_round.change(function () {
-//         if ($('.checkbox_round:checked').length > 0) {
-//             checkbox_round.removeAttr('required');
-//         } else {
-//             checkbox_round.attr('required', 'required');
-//         }
-//     });
-// });
-
-// async function checkForm() {
-//     $(function () {
-//         let requiredCheckboxes = $('.avatarContainer :checkbox[required]');
-//         requiredCheckboxes.change(function () {
-//             if (requiredCheckboxes.is(':checked')) {
-//                 requiredCheckboxes.removeAttr('required');
-//             } else {
-//                 requiredCheckboxes.attr('required', 'required');
-//             }
-//         });
-//     });
-// }
