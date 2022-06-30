@@ -10,10 +10,13 @@ function renderToDo() {
             <div>
             <h2>${allTasksArray[i].title}</h2>
                 <h2>${allTasksArray[i].names}</h2>
+                <div>
+                    <img src="../img/${i}.png">
+                        </div>
                 
                 <h2 id="task_${i}">${allTasksArray[i].category}</h2>
                 <p>${allTasksArray[i].description}</p>
-                <button onclick="deleteNote" >Löschen</button>
+                <button onclick="deleteNote()" >Löschen</button>
             </div>
            
         </div>
@@ -21,17 +24,36 @@ function renderToDo() {
         `
         }
     }
+
+    renderAvatarPic();
 }
 
 
-function updateHTML(){
-    let toDO = allTasksArray.filter(t =>['categorty'] == 'toDO')
+// function renderAvatarPic(i) {
+//     if (allTasksArray[i].backlog == true) {
+
+//         for (let j = 0; j < allTasksArray[i].names.length; j++) {
+
+//             document.getElementById('backlogAvatar_' + i).innerHTML +=
+//                 `<div class="avatarPicTitle">
+//                     <img class="backlogImg" src="../img/${allTasksArray[i].names[j]}.png">
+//                     <h2>${allTasksArray[i].names[j].replace('_', ' ')}</h2>
+//                 </div>`;
+//         }
+
+//     }
+// }
+
+
+
+function updateHTML() {
+    let toDO = allTasksArray.filter(t => ['categorty'] == 'toDO')
     document.getElementById('toDO').innerHTML = '';
 
     for (let index = 0; index < allTaskArray.length; index++) {
         const element = allTaskArray[index];
         document.getElementById('toDO').innerHTML += renderToDo(element)
-        
+
     }
 
 
@@ -43,33 +65,26 @@ function updateHTML(){
         document.getElementById('inProgress').innerHTML += renderToDo(element)
 
     }
-    let testing = allTaskArray.filter(t=>t['category']== 'testing');
-    document.getElementById('testing').innerHTML= '';
+    let testing = allTaskArray.filter(t => t['category'] == 'testing');
+    document.getElementById('testing').innerHTML = '';
     for (let index = 0; index < testing.length; index++) {
-        const element =testing[index];
+        const element = testing[index];
         document.getElementById('testing').innerHTML += renderToDo(element)
-        
+
     }
-    let done = allTaskArray.filter(t=>t['category']== 'done');
-    document.getElementById('done').innerHTML= '';
+    let done = allTaskArray.filter(t => t['category'] == 'done');
+    document.getElementById('done').innerHTML = '';
     for (let index = 0; index < done.length; index++) {
         const element = done[index];
         document.getElementById('done').innerHTML += renderToDo(element)
-        
+
     }
 }
-
-
-
-
-
-
-
 let currentDraggedElement;
 
 
 
-function startDragging() {
+function startDragging(id) {
     let currentDraggedElement = id;
 
 }
@@ -82,5 +97,18 @@ function allowDrop(ev) {
 function moveTo(category) {
     todos[currentDraggedElement]['category'] = category;
     updateHTML();
+
+}
+
+
+
+
+//aus Array löschen//
+
+function deleteNote(position){
+    allTaskArray.splice(position,1)
+
+
+ renderToDo();
 
 }
