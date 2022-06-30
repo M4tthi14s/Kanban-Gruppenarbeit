@@ -4,10 +4,9 @@
     width: 100%;
 }
 
-h2 {
-  
-    margin-left: 92px;
-    margin-right: 92px;
+.section-two h2 {
+    /* margin-left: 92px;
+    margin-right: 92px; */
 }
 
 .headlineBoard {
@@ -17,20 +16,26 @@ h2 {
     justify-content: space-between;
 
 }
-.section-two{
+
+.section-two {
     display: flex;
     justify-content: space-between;
-
+    margin: 16px;
 }
 
-.note{
+.note {
     background-color: beige;
-    border: 1px dashed black;
+    border: 1px solid black;
+    margin-bottom: 6px;
 }
 
-.column{
- 
+.column {
     width: 150px;
-    background-color: gray;
+    background-color: rgb(199, 199, 199);
     height: 500px;
+}
+
+.note h2 {
+    margin: 0px;
+    font-size: 16px;
 }
