@@ -44,13 +44,14 @@ async function addTask() {
         'urgency': urgency,
         'createAt': dateFormatDE(),
         'backlog': true,
-        'id': id
+        'id': id,
+        'board': 'toDo'
     };
 
     title.value = '';
     description.value = '';
     names = [];
-    
+
     allTasksArray.push(task);
     await backend.setItem('allTasksArray', JSON.stringify(allTasksArray));
 

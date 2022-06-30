@@ -31,11 +31,21 @@
 
 .column {
     width: 150px;
-    background-color: rgb(199, 199, 199);
+    background-color: rgb(224, 224, 224);
     height: 500px;
 }
 
 .note h2 {
     margin: 0px;
     font-size: 16px;
+}
+
+.todo{
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+}
+
+.box_Highlight{
+    background-color: rgb(148, 148, 148);
 }

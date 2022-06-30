@@ -1,50 +1,27 @@
 <h2>Board</h2>
-<!-- <div class="headlineBoard">
-    <h2>TO DO</h2>
-    <h2>IN PROGRESS</h2>
-    <h2>TESTING</h2>
-    <h2>DONE</h2>
-    <h2>DELETE</h2>
-</div> -->
-
 
 
 <div>
-<div class="section-two">
-    <div><h2>TODO</h2>
-        <div class="column" id="toDo">
-            <div ondragstart="startDragging() ,allowDrop()" class="colum"></div>
+    <div class="section-two">
+        <div>
+            <h2>TODO</h2>
+            <div class="column" id="toDo" ondrop="moveTo('toDo')" ondragleave="removeHighlight('toDo')" ondragover="allowDrop(event); highlight('toDo')"></div>
+        </div>
+        <div>
+            <h2>IN PROGRESS</h2>
+            <div class="column" id="inProgress" ondrop="moveTo('inProgress')" ondragleave="removeHighlight('inProgress')" ondragover="allowDrop(event); highlight('inProgress')"></div>
+        </div>
+        <div>
+            <h2>TESTING</h2>
+            <div class="column" id="testing" ondrop="moveTo('testing')" ondragleave="removeHighlight('testing')" ondragover="allowDrop(event); highlight('testing')"></div>
+        </div>
+        <div>
+            <h2>DONE</h2>
+            <div class="column" id="done" ondrop="moveTo('done')" ondragleave="removeHighlight('done')" ondragover="allowDrop(event); highlight('done')"></div>
+        </div>
+        <div>
+            <h2>TRASH</h2>
+            <div class="column" id="trash" ondrop="moveTo('trash')" ondragleave="removeHighlight('trash')" ondragover="allowDrop(event); highlight('trash')"></div>
         </div>
     </div>
-    <div><h2>IN PROGRESS</h2>
-        <div class="column" id="inProgress">
-            <div ondragstart="startDragging() ,allowDrop()" class="colum"></div>
-        </div>
-    </div>
-    <div><h2>TESTING</h2>
-        <div class="column" id="testing" >
-            <div ondragstart="startDragging() ,allowDrop()" class="colum"></div>
-        </div>
-    </div>
-    <div><h2>DONE</h2>
-        <div class="column" id="done">
-            <div ondragstart="startDragging() ,allowDrop()" class="colum"></div>
-        </div>
-    </div>
-    <div><h2>TRASH</h2>
-        <div class="column" id="trash">
-            <div ondragstart="startDragging() ,allowDrop()" class="colum"></div>
-        </div>
-    </div>
-  
-</div>
-
-
-</div>
-
-
-
-</div>
-
-
 </div>
