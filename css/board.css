@@ -19,17 +19,18 @@ h2 {
 }
 .section-two{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 
 }
-.colum {
 
-    height: 50vh;
-    /* width: 200px; */
-    background-color: rgb(173, 168, 168);
-    
-   
+.note{
+    background-color: beige;
+    border: 1px dashed black;
 }
-.toDo{
-    background-color: aqua;
+
+.column{
+ 
+    width: 150px;
+    background-color: gray;
+    height: 500px;
 }

@@ -8,20 +8,22 @@ function renderToDo() {
                 `
                 <div id="toDO">
                 <div draggable="true" class="note" id="task_${i}"
-                     <h2 id="backlogAvatar_${i}">${allTasksArray[i].title}</h2>
-                     <div id="backlogAvatar_${i}"></div>
+                     <h2>${allTasksArray[i].title}</h2>
+                         <h2>${allTasksArray[i].names}</h2>
+                            <div>
+                                <img src="../img/${i}.png">
+                            </div>
                     
                     <h2 id="task_${i}">${allTasksArray[i].category}</h2>
                     <p>${allTasksArray[i].description}</p>
                     <button onclick="deleteNote(${i})" >Löschen</button>
                 </div>
-               
-            </div>
         `
         }
         renderAvatarPicFalse(i);
     }
 }
+
 
 function renderAvatarPicFalse(i) {
     if (allTasksArray[i].backlog == false) {
@@ -37,10 +39,6 @@ function renderAvatarPicFalse(i) {
     }
 }
 
-<<<<<<< HEAD
-function renderAvatarPic(i) {
-    if (allTasksArray[i].backlog == true) {
-=======
 {/* <div>
 <img src="../img/${i}.png">
 </div> */}
@@ -48,21 +46,20 @@ function renderAvatarPic(i) {
 
 
 
-// function renderAvatarPic(i) {
-//     if (allTasksArray[i].backlog == true) {
->>>>>>> e1d12966179d299a3cb7642452794f22c5a66afc
+// // function renderAvatarPic(i) {
+// //     if (allTasksArray[i].backlog == true) {
 
-        for (let j = 0; j < allTasksArray[i].names.length; j++) {
+//         for (let j = 0; j < allTasksArray[i].names.length; j++) {
 
-            document.getElementById('backlogAvatar_' + i).innerHTML +=
-                `<div class="avatarPicTitle">
-                    <img class="backlogImg" src="../img/${allTasksArray[i].names[j]}.png">
-                    <h2>${allTasksArray[i].names[j].replace('_', ' ')}</h2>
-                </div>`;
-        }
+//             document.getElementById('backlogAvatar_' + i).innerHTML +=
+//                 `<div class="avatarPicTitle">
+//                     <img class="backlogImg" src="../img/${allTasksArray[i].names[j]}.png">
+//                     <h2>${allTasksArray[i].names[j].replace('_', ' ')}</h2>
+//                 </div>`;
+//         }
 
-    }
-}
+//     }
+// }
 
 
 
