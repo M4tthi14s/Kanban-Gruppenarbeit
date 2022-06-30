@@ -1,6 +1,6 @@
 function renderToDo() {
     let toDo = document.getElementById('toDo');
-
+    toDo.innerHTML = '';
 
     for (let i = 0; i < allTasksArray.length; i++) {
         if (allTasksArray[i].backlog == false) {
@@ -10,9 +10,7 @@ function renderToDo() {
                 <div draggable="true" class="note" id="task_${i}"
                      <h2>${allTasksArray[i].title}</h2>
                          <h2>${allTasksArray[i].names}</h2>
-                            <div>
-                                <img src="../img/${i}.png">
-                            </div>
+
                     
                     <h2 id="task_${i}">${allTasksArray[i].category}</h2>
                     <p>${allTasksArray[i].description}</p>
@@ -24,12 +22,24 @@ function renderToDo() {
         }
     }
 
-    renderAvatarPic();
+    // renderAvatarPic();
 }
 
 
+<<<<<<< HEAD
 function renderAvatarPic(i) {
     if (allTasksArray[i].backlog == true) {
+=======
+{/* <div>
+<img src="../img/${i}.png">
+</div> */}
+
+
+
+
+// function renderAvatarPic(i) {
+//     if (allTasksArray[i].backlog == true) {
+>>>>>>> e1d12966179d299a3cb7642452794f22c5a66afc
 
         for (let j = 0; j < allTasksArray[i].names.length; j++) {
 
@@ -104,10 +114,8 @@ function moveTo(category) {
 
 //aus Array löschen//
 
-function deleteNote(position){
-    allTasksArray.splice(position,1)
+function deleteNote(position) {
+    allTasksArray.splice(position, 1)
 
-
- renderToDo(i);
-
+    renderToDo();
 }
