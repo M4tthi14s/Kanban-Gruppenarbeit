@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task</title>
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/addTask.css">
+    <link rel="stylesheet" href="./css/navMenu.css">
+    <link rel="stylesheet" href="./css/board.css">
+    <link rel="stylesheet" href="./css/backlog.css">
+    <link rel="stylesheet" href="./css/howTo.css">
+
+    <link rel="stylesheet" href="./css/copyright.css">
+    <link rel="stylesheet" href="./css/privacy.css">
+    <link rel="stylesheet" href="./css/imprint.css">
+
+    <script src="./js/mini_backend.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/navMenu.js"></script>
+    <script src="./js/addTask.js"></script>
+    <script src="./js/backlog.js"></script>
+    <script src="./js/board.js"></script>
+    <script src="./js/includeHTML.js"></script>
+</head>
+
+<body onload="includeHTML(), init()">
+
+    <div class="distributor">
+        <div w3-include-html="./templates/navMenu.html"></div>
+
+        <div class="headlineBody" id="headlineBody">
+            <h1>Join</h1>
+            <h2>Add Task</h2>
+        </div>
+
+        <div id="board" class="board" w3-include-html="./templates/board.html"></div>
+        <div id="backlog" class="backlog" w3-include-html="./templates/backlog.html"></div>
+        <div id="addTask" class="addTask" w3-include-html="./templates/addTask.html"></div>
+        <div id="howTo" class="howTo" w3-include-html="./templates/howTo.html"></div>
+
+        <div id="copyright" class="copyright" w3-include-html="./templates/copyright.html"></div>
+        <div id="imprint" class="imprint" w3-include-html="./templates/imprint.html"></div>
+        <div id="privacy" class="privacy" w3-include-html="./templates/privacy.html"></div>
+    </div>
+
+
+</body>
+
+</html>

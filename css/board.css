@@ -4,10 +4,6 @@
     width: 100%;
 }
 
-.section-two h2 {
-    font-size: 16px;
-}
-
 .headlineBoard {
     text-align: center;
     padding-left: 10px;
@@ -16,17 +12,27 @@
 
 }
 
-.section-two {
+.boardContainer {
     display: flex;
     justify-content: space-between;
     margin: 16px;
 }
+
+.boardContainer h2 {
+    font-size: 16px;
+}
+
 
 /* .note {
     background-color: beige;
     border: 1px solid black;
     margin-bottom: 6px;
 } */
+
+.trashContainer {
+    display: flex;
+    justify-content: center;
+}
 
 .column {
     width: 150px;
@@ -39,7 +45,7 @@
     font-size: 16px;
 }
 
-.todo{
+.todo {
     border: 1px solid black;
     cursor: pointer;
     background-color: rgb(255, 255, 255);
@@ -48,6 +54,6 @@
     border-radius: 4px;
 }
 
-.box_Highlight{
+.box_Highlight {
     background-color: rgb(148, 148, 148);
 }
