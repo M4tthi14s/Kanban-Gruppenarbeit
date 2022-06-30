@@ -1,5 +1,4 @@
 function generateTodoHTML(element) {
-
     return `
             <div draggable="true" ondragstart="startDragging(${element['id']})" class="todo">${element['title']}
                 <div id="toDoTask_${element['id']}">
@@ -75,6 +74,7 @@ function updateHTML() {
     }
 }
 
+
 let currentDraggedElement;
 
 
@@ -105,7 +105,14 @@ function removeHighlight(id) {
 
 
 function deleteNote(position) {
-    allTasksArray.splice(position, 1)
 
-    updateHTML();
+    // let index = 'trash';
+    // // allTasksArray.splice(position, 1, 'trash');
+    // allTasksArray.splice(position, 1, index);
+    console.log(position)
+    let index = 'trash';
+
+    moveTo(index);
+
+    // updateHTML();
 }
