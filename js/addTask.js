@@ -49,7 +49,8 @@ async function addTask() {
 
     title.value = '';
     description.value = '';
-
+    names = [];
+    
     allTasksArray.push(task);
     await backend.setItem('allTasksArray', JSON.stringify(allTasksArray));
 
@@ -61,7 +62,6 @@ let avatarArray = ['Bob_Marley', 'Lisa_Brennon', 'Mili_Vanilli', 'Ron_Stevens', 
 let names = [];
 
 function avatarSelect(index) {
-    names = [];
     document.getElementById(index).classList.toggle('avatarAddTaskToggle');
 
     if (names.includes(avatarArray[index])) {
@@ -72,20 +72,11 @@ function avatarSelect(index) {
 
 
     if (names.length == 0) {
-
     }
+
     if (names.length > 0) {
         document.getElementById('checkbox').removeAttribute('required');
-        // document.getElementById('checkbox0').removeAttribute('required');
-        // document.getElementById('checkbox1').removeAttribute('required');
-        // document.getElementById('checkbox2').removeAttribute('required');
-        // document.getElementById('checkbox3').removeAttribute('required');
-        // document.getElementById('checkbox4').removeAttribute('required');
-        // document.getElementById('checkbox5').removeAttribute('required');
-
     }
-
-
 }
 
 
@@ -100,7 +91,7 @@ function renderAvatar() {
     }
     avatar.innerHTML += '<input id="checkbox" class="checkbox_round" required type="checkbox"></input>';
 }
-{/* <input id="checkbox${i}" class="checkbox_round" required type="checkbox"></input> */ }
+
 
 function dateFormatDE() {
     let options = { day: '2-digit', month: '2-digit', year: 'numeric' };
