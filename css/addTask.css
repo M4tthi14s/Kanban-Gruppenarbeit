@@ -78,9 +78,12 @@
 }
 
 
-.avatarAddTask{
+.avatarAddTask {
     display: flex;
     flex-wrap: wrap;
+    border: 1px solid #8b8b8b;
+    border-radius: 3px;
+    background-color: white;
 }
 
 
@@ -99,7 +102,7 @@
     border-radius: 50px;
 }
 
-.avatarAddTask a{
+.avatarAddTask a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,19 +115,19 @@
 
 
 .checkbox_round {
-    position: fixed;
-    width: 36px;
-    height: 36px;
+    /* position: fixed; */
+    width: 140px;
+    height: 1px;
     background-color: #ffffff00;
-    border-radius: 50%;
-    vertical-align: middle;
-    border: 2px solid #ddd;
-    appearance: none;
+    /* border-radius: 50%;
+    vertical-align: middle; */
+    /* border: 2px solid #ddd; */
+    /* appearance: none; */
     -webkit-appearance: none;
     outline: none;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
-.checkbox_round:checked {
+/* .checkbox_round:checked {
     border: 2px solid rgb(115, 115, 115);
-}
+} */

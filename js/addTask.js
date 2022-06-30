@@ -26,16 +26,13 @@ async function addTask() {
     let category = document.getElementById('category').value;
     let urgency = document.getElementById('urgency').value;
 
-
     let id;
     if (!allTasksArray[1]) { id = 1 }
     else {
         let number = allTasksArray.length;
-        number = number-1;
+        number = number - 1;
         let index = allTasksArray[number].id
         id = (index) + 1;
-        console.log(number)
-        console.log(id)
     }
 
     let task = {
@@ -78,13 +75,13 @@ function avatarSelect(index) {
 
     }
     if (names.length > 0) {
-
-        document.getElementById('checkbox0').removeAttribute('required');
-        document.getElementById('checkbox1').removeAttribute('required');
-        document.getElementById('checkbox2').removeAttribute('required');
-        document.getElementById('checkbox3').removeAttribute('required');
-        document.getElementById('checkbox4').removeAttribute('required');
-        document.getElementById('checkbox5').removeAttribute('required');
+        document.getElementById('checkbox').removeAttribute('required');
+        // document.getElementById('checkbox0').removeAttribute('required');
+        // document.getElementById('checkbox1').removeAttribute('required');
+        // document.getElementById('checkbox2').removeAttribute('required');
+        // document.getElementById('checkbox3').removeAttribute('required');
+        // document.getElementById('checkbox4').removeAttribute('required');
+        // document.getElementById('checkbox5').removeAttribute('required');
 
     }
 
@@ -98,11 +95,12 @@ function renderAvatar() {
     for (let i = 0; i < avatarArray.length; i++) {
         avatar.innerHTML +=
             `
-            <a href="#" onclick="avatarSelect(${i})"><input id="checkbox${i}" class="checkbox_round" required type="checkbox"></input><img id="${i}" src="../img/${avatarArray[i]}.png"></a>
+            <a href="#" onclick="avatarSelect(${i})"><img id="${i}" src="../img/${avatarArray[i]}.png"></a>
             `;
     }
+    avatar.innerHTML += '<input id="checkbox" class="checkbox_round" required type="checkbox"></input>';
 }
-{/* <input class="checkbox_round" required type="checkbox"></input> */ }
+{/* <input id="checkbox${i}" class="checkbox_round" required type="checkbox"></input> */ }
 
 function dateFormatDE() {
     let options = { day: '2-digit', month: '2-digit', year: 'numeric' };
