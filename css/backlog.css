@@ -5,27 +5,45 @@
     width: 100%;
 }
 
-.backlog h2 {
+.headlineBacklog h2 {
     font-size: 16px;
     margin: 16px;
+    width: 110px;
+    text-align: center;
 }
 
-.backlogTitle{
+.backlogTitle {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-left: 8px;
-    width: 160px;
+    width: 80px;
 }
 
-.avatarPicTitle{
+.backlogAssignedTo,
+.backlogCategory,
+.backlogDetails {
+    width: 140px;
+    background-color: #ececec;
+    border-radius: 8px;
+}
+
+.avatarPicTitle {
     display: flex;
     align-items: center;
 }
 
 .headlineBacklog {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+}
+
+.placeholderBacklogLeft {
+    width: 89px;
+}
+
+.placeholderBacklogRight {
+    width: 100px;
 }
 
 .task {
@@ -38,8 +56,12 @@
     margin-bottom: 8px;
 }
 
-.task h2 {
+.task h2,
+.backlogDetails p {
+    font-size: 16px;
     margin: 8px;
+    text-align: center;
+    font-weight: 500;
 }
 
 .btnBacklog {
@@ -49,9 +71,13 @@
     background-color: #1e3190;
     color: white;
     margin: 1px;
+    width: 100px;
 }
 
-.backlogImg{
+.backlogImg {
     width: 24px;
     height: 24px;
+    border: 1px solid #4e4e4e;
+    border-radius: 50px;
+    background-color: white;
 }

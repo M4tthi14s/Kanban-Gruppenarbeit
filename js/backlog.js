@@ -9,10 +9,10 @@ function backlogList() {
                 `
             <div class="task" id="task_${i}">
                 <div id="backlogAvatar_${i}" class="backlogTitle"></div>
-                <div id="backlogNames_${i}"><h2>${allTasksArray[i].title}</h2></div>
+                <div class="backlogAssignedTo"><h2>${allTasksArray[i].title}</h2></div>
 
-                <h2 id="task_${i}">${allTasksArray[i].category}</h2>
-                <p>${allTasksArray[i].description}</p>
+                <div class="backlogCategory"><h2 id="task_${i}">${allTasksArray[i].category}</h2></div>
+                <div class="backlogDetails"><p>${allTasksArray[i].description}</p></div>   
                 <button class="btnBacklog" onclick="taskPushToBoard(${i})">
                     TO BOARD
                 </button>
