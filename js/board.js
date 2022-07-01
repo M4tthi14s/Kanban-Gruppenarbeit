@@ -8,7 +8,8 @@ function generateTodoHTML(element) {
 
                         <h2 id="task_${element['id']}">${element['category']}</h2>
                         <p>${element['description']}</p>
-                        <button onclick="deleteNote(${element['id']})">Löschen</button>
+                        <div id="paperBin_${element['id']}"></div>
+  
                     </div>
                 </div>
             </div>
@@ -16,61 +17,85 @@ function generateTodoHTML(element) {
 }
 
 
-function renderAvatarPicFalse(i) {
-    if (allTasksArray[i].backlog == false) {
-
-        for (let j = 0; j < allTasksArray[i].names.length; j++) {
-
-            document.getElementById('backlogAvatar_' + i).innerHTML +=
-                `<div class="avatarPicTitle">
-                    <img class="backlogImg" src="../img/${allTasksArray[i].names[j]}.png">
-                    <h2>${allTasksArray[i].names[j].replace('_', ' ')}</h2>
-                </div>`;
+function renderAvatarPicFalse(index) {
+    // console.log(index)
+    let num 
+    for (let i = 0; i < allTasksArray.length; i++) {
+        if (allTasksArray[i].id == index) {
+            num = i;
         }
+    }
+    // if (allTasksArray[i].backlog == false) {
+// console.log(num)
+    for (let j = 0; j < allTasksArray[num].names.length; j++) {
+
+        document.getElementById('backlogAvatar_' + index).innerHTML +=
+            `<div class="avatarPicTitle">
+                    <img class="backlogImg" src="../img/${allTasksArray[num].names[j]}.png">
+                    <h2>${allTasksArray[num].names[j].replace('_', ' ')}</h2>
+                </div>`;
+    }
+    // }
+}
+
+
+function renderPaperBin(element, dell) {
+    if (dell == false) {
+        return `<button onclick="deleteNote(${element['id']})">Dell</button>`;
+    } else {
+        return `<button onclick="paperBinNote(${element['id']})">Paperbin</button>`;
     }
 }
 
 
 function updateHTML() {
 
-    let toDo = allTasksArray.filter(t => t['board'] == 'toDo');
+    let ifFalse = allTasksArray.filter(t => t['backlog'] == false);
+
+    let toDo = ifFalse.filter(t => t['board'] == 'toDo');
     document.getElementById('toDo').innerHTML = '';
     for (let index = 0; index < toDo.length; index++) {
         const element = toDo[index];
         document.getElementById('toDo').innerHTML += generateTodoHTML(element);
         renderAvatarPicFalse(element['id']);
+        document.getElementById('paperBin_' + element['id']).innerHTML = renderPaperBin(element);
     }
 
-    let inProgress = allTasksArray.filter(t => t['board'] == 'inProgress');
+    let inProgress = ifFalse.filter(t => t['board'] == 'inProgress');
     document.getElementById('inProgress').innerHTML = '';
     for (let index = 0; index < inProgress.length; index++) {
         const element = inProgress[index];
         document.getElementById('inProgress').innerHTML += generateTodoHTML(element);
         renderAvatarPicFalse(element['id']);
+        document.getElementById('paperBin_' + element['id']).innerHTML = renderPaperBin(element);
     }
 
-    let testing = allTasksArray.filter(t => t['board'] == 'testing');
+    let testing = ifFalse.filter(t => t['board'] == 'testing');
     document.getElementById('testing').innerHTML = '';
     for (let index = 0; index < testing.length; index++) {
         const element = testing[index];
         document.getElementById('testing').innerHTML += generateTodoHTML(element);
         renderAvatarPicFalse(element['id']);
+        document.getElementById('paperBin_' + element['id']).innerHTML = renderPaperBin(element);
     }
 
-    let done = allTasksArray.filter(t => t['board'] == 'done');
+    let done = ifFalse.filter(t => t['board'] == 'done');
     document.getElementById('done').innerHTML = '';
     for (let index = 0; index < done.length; index++) {
         const element = done[index];
         document.getElementById('done').innerHTML += generateTodoHTML(element);
         renderAvatarPicFalse(element['id']);
+        document.getElementById('paperBin_' + element['id']).innerHTML = renderPaperBin(element);
     }
 
-    let trash = allTasksArray.filter(t => t['board'] == 'trash');
+    let trash = ifFalse.filter(t => t['board'] == 'trash');
     document.getElementById('trash').innerHTML = '';
     for (let index = 0; index < trash.length; index++) {
         const element = trash[index];
         document.getElementById('trash').innerHTML += generateTodoHTML(element);
         renderAvatarPicFalse(element['id']);
+        let dell = false;
+        document.getElementById('paperBin_' + element['id']).innerHTML = renderPaperBin(element, dell);
     }
 }
 
@@ -90,8 +115,8 @@ function allowDrop(ev) {
 
 function moveTo(board) {
     allTasksArray[currentDraggedElement]['board'] = board;
-    updateHTML();
     pushToServer();
+    updateHTML();
 }
 
 
@@ -105,11 +130,36 @@ function removeHighlight(id) {
 }
 
 
-function deleteNote(position) {
+function paperBinNote(position) {
+
+    // console.log(position)
+
+    let num;
+    for (let i = 0; i < allTasksArray.length; i++) {
+        if (allTasksArray[i].id == position) {
+            num=i;
+        }
+    }
+
+    // console.log(num)
+
+
     let index = "trash";
-     allTasksArray[position]['board'] = index;
-    updateHTML();
+    allTasksArray[num]['board'] = index;
     pushToServer();
+    updateHTML();
+}
+
+
+function deleteNote(position) {
+
+    for (let i = 0; i < allTasksArray.length; i++) {
+        if (allTasksArray[i].id == position) {
+            allTasksArray.splice(i, 1);
+        }
+    }
+    pushToServer();
+    updateHTML();
 }
 
 
