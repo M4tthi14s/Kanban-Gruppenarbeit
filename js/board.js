@@ -47,6 +47,7 @@ function renderPaperBin(element, dell) {
     } else {
         return `<button onclick="paperBinNote(${element['id']})">Paperbin</button>`;
     }
+    
 }
 
 
