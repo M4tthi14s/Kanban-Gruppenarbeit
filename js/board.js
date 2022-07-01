@@ -32,12 +32,14 @@ function renderAvatarPicFalse(index) {
         document.getElementById('backlogAvatar_' + index).innerHTML +=
             `<div class="avatarPicTitle">
                     <img class="backlogImg" src="../img/${allTasksArray[num].names[j]}.png">
-                    <h2>${allTasksArray[num].names[j].replace('_', ' ')}</h2>
+                    <h2>${letterName(num,j)}</h2>
                 </div>`;
     }
     // }
 }
 
+// letterName(i,j)
+// allTasksArray[num].names[j].replace('_', ' ')
 
 function renderPaperBin(element, dell) {
     if (dell == false) {

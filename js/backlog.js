@@ -24,17 +24,28 @@ function backlogList() {
 }
 
 
+function letterName(i,j){
+            // allTasksArray[i].names[j].replace('_', ' ')
+
+            let fullNames = allTasksArray[i].names[j];
+            let firstLetter = fullNames.charAt(0);
+            let numberLetter = fullNames.indexOf('_');
+            secondLetter = fullNames.charAt(numberLetter+1);
+
+            return`${firstLetter}. ${secondLetter}.`;
+}
+
+
 function renderAvatarPicTrue(i) {
     if (allTasksArray[i].backlog == true) {
 
         for (let j = 0; j < allTasksArray[i].names.length; j++) {
-
             document.getElementById('backlogAvatar_' + i).innerHTML +=
                 `<div class="avatarPicTitle">
                     <img class="backlogImg" src="../img/${allTasksArray[i].names[j]}.png">
-                    <h2>${allTasksArray[i].names[j].replace('_', ' ')}</h2>
+                    <h2>${letterName(i,j)}</h2>
                 </div>`;
-        }
+        }   
     }
 }
 
