@@ -130,7 +130,6 @@ function moveTo(board) {
         allTasksArray[i]['board'] = board;
         pushToServer();
         updateHTML();
-        console.log(content)
     }
  
 }

@@ -72,6 +72,7 @@ function avatarSelect(index) {
 
 
     if (names.length == 0) {
+        document.getElementById('checkbox').setAttribute("required", "");  
     }
 
     if (names.length > 0) {
