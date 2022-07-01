@@ -44,7 +44,7 @@ function paperBin() {
 
 
 
-function searchInput() {
+function searchTitle() {
     let search = document.getElementById('searchTitle').value;
     search = search.toLowerCase();
 
