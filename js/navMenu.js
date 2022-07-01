@@ -40,3 +40,31 @@ function paperBin() {
     document.getElementById('boardContainer').classList.toggle('d-none');
     document.getElementById('trashContainer').classList.toggle('d-none');
 }
+
+
+
+
+function searchInput() {
+    let search = document.getElementById('searchTitle').value;
+    search = search.toLowerCase();
+
+    let list = document.getElementById('outputSearch');
+    list.innerHTML = '';
+
+    for (let i = 0; i < allTasksArray.length; i++) {
+        const currentItem = allTasksArray[i].title.toLowerCase();
+
+        if (currentItem.toLowerCase().includes(search) && search.length > 0) {
+            list.innerHTML +=
+                `
+                <ul><a onclick="closeSearch()" href="#jump${i}">${currentItem}</a></ul>
+                `;
+        }
+
+        if (search.length < 0) {
+            document.getElementById('outputSearch').innerHTML = '';
+            document.getElementById('searchInput').value = '';
+        }
+    };
+}
+

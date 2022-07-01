@@ -19,20 +19,20 @@ function generateTodoHTML(element) {
 
 function renderAvatarPicFalse(index) {
     // console.log(index)
-    let num 
+    let num
     for (let i = 0; i < allTasksArray.length; i++) {
         if (allTasksArray[i].id == index) {
             num = i;
         }
     }
     // if (allTasksArray[i].backlog == false) {
-// console.log(num)
+    // console.log(num)
     for (let j = 0; j < allTasksArray[num].names.length; j++) {
 
         document.getElementById('backlogAvatar_' + index).innerHTML +=
             `<div class="avatarPicTitle">
                     <img class="backlogImg" src="../img/${allTasksArray[num].names[j]}.png">
-                    <h2>${letterName(num,j)}</h2>
+                    <h2>${letterName(num, j)}</h2>
                 </div>`;
     }
     // }
@@ -122,9 +122,17 @@ function allowDrop(ev) {
 
 
 function moveTo(board) {
-    allTasksArray[currentDraggedElement]['board'] = board;
-    pushToServer();
-    updateHTML();
+
+    for (let i = 0; i < allTasksArray.length; i++) {
+        const content = allTasksArray[i].id;
+       
+        if (content == currentDraggedElement)
+        allTasksArray[i]['board'] = board;
+        pushToServer();
+        updateHTML();
+        console.log(content)
+    }
+ 
 }
 
 
@@ -145,7 +153,7 @@ function paperBinNote(position) {
     let num;
     for (let i = 0; i < allTasksArray.length; i++) {
         if (allTasksArray[i].id == position) {
-            num=i;
+            num = i;
         }
     }
 
@@ -167,7 +175,7 @@ function deleteNote(position) {
         }
     }
     pushToServer();
-    downloadFromServer();
+    // downloadFromServer();
     updateHTML();
 }
 
