@@ -47,8 +47,13 @@ function renderPaperBin(element, dell) {
     } else {
         return `<button onclick="paperBinNote(${element['id']})">Paperbin</button>`;
     }
-    
+
 }
+
+// async function renderAfterBin(){
+//  await downloadFromServer
+
+// } 
 
 
 function updateHTML() {
