@@ -21,8 +21,28 @@
     margin: 0px 16px;
 }
 
+.searchContainer{
+    display: flex;
+    align-items: center;
+    width: 220px;
+    height: 32px;
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid #999999;
+
+}
 .searchTitle {
     display: none;
+    border: none;
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+}
+
+.searchContainer img{
+    width: 24px;
+    height: 24px;
+    margin: 0px 6px;
 }
 
 #paperBin {
