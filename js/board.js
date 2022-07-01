@@ -161,6 +161,7 @@ function deleteNote(position) {
         }
     }
     pushToServer();
+    downloadFromServer();
     updateHTML();
 }
 
