@@ -10,6 +10,7 @@
     margin: 16px;
     width: 110px;
     text-align: center;
+    color: rgb(50 50 50);
 }
 
 .backlogTitle {
@@ -39,21 +40,28 @@
 }
 
 .placeholderBacklogLeft {
-    width: 89px;
+    width: 92px;
 }
 
 .placeholderBacklogRight {
-    width: 100px;
+    width: 98px;
 }
 
 .task {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    border: 1px solid #767676;
+    border: 1.6px solid #cbcbcb;
     background-color: #f8f8f8;
     border-radius: 8px;
     margin-bottom: 8px;
+    padding: 6px 2px;
+    transition: all 125ms linear;
+}
+
+.task:hover {
+    transform: scale(1.01);
+    transition: all 125ms linear;
 }
 
 .task h2,
@@ -70,8 +78,11 @@
     border-radius: 8px;
     background-color: #1e3190;
     color: white;
-    margin: 1px;
     width: 100px;
+}
+
+.btnBacklog:hover {
+    background-color: #34459a;
 }
 
 .backlogImg {

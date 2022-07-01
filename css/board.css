@@ -47,15 +47,32 @@
     font-size: 16px;
 }
 
-.todo {
-    border: 1px solid black;
+.boardTask {
+    border: 1px solid rgb(37, 37, 37);
     cursor: pointer;
     background-color: rgb(255, 255, 255);
     margin-bottom: 8px;
     padding: 8px;
     border-radius: 4px;
+    transition: all 125ms linear;
+}
+
+.boardTask:hover {
+    transform: scale(1.02);
+    transition: all 125ms linear;
 }
 
 .box_Highlight {
     background-color: rgb(148, 148, 148);
+}
+
+.paperBinImg img {
+    width: 24px;
+    height: 24px;
+    border: 1.4px solid rgb(128, 128, 128);
+    border-radius: 4px;
+}
+
+.paperBinImg img:hover {
+    border: 1.4px solid #1e3190;
 }

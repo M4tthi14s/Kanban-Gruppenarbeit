@@ -23,16 +23,20 @@
 }
 
 .addTaskTitle input {
-    width: 228px;
+    width: 222px;
     height: 38px;
     border: 1.4px solid #d4d4d4;
     border-radius: 3px;
     padding: 0px;
+    outline: none;
+    font-size: 16px;
+    padding-left: 6px;
+    color: #757575;
 }
 
 .addTask h1 {
     font-size: 20px;
-    color: rgb(39, 39, 39);
+    color: rgb(50 50 50);
     text-align: center;
 }
 
@@ -60,6 +64,9 @@
     border: 1.4px solid #d4d4d4;
     border-radius: 3px;
     background-color: white;
+    outline: none;
+    font-size: 16px;
+    color: #757575;
 }
 
 .description {
@@ -69,11 +76,14 @@
 }
 
 .descriptionBox input {
-    width: 228px;
+    width: 222px;
     height: 80px;
     border: 1.4px solid #d4d4d4;
     border-radius: 3px;
     padding: 0px;
+    outline: none;
+    font-size: 16px;
+    padding-left: 6px;
 }
 
 .avatarContainer {
@@ -84,6 +94,11 @@
     width: 230px;
 }
 
+.btnContainer {
+    width: 230px;
+    display: flex;
+    justify-content: flex-end;
+}
 
 .avatarContainer button {
     background-color: #1e3190;
@@ -91,7 +106,9 @@
     border-radius: 6px;
     border: none;
     width: 90px;
+    height: 40px;
     cursor: pointer;
+    margin-top: 8px;
 }
 
 .avatarAddTask {
@@ -128,6 +145,8 @@
 .avatarAddTaskToggle {
     border: 2px solid #1e3190 !important;
 }
+
+
 
 
 .checkbox_round {
