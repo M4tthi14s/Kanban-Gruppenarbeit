@@ -35,7 +35,7 @@ function renderAvatarPicFalse(index) {
 
         document.getElementById('backlogAvatar_' + index).innerHTML +=
             `<div class="avatarPicTitleBord">
-                    <img class="backlogImg" src="../img/${allTasksArray[num].names[j]}.png">
+                    <img class="backlogImg" src="./img/${allTasksArray[num].names[j]}.png">
                     <h2>${letterName(num, j)}</h2>
                 </div>`;
     }
@@ -47,10 +47,10 @@ function renderAvatarPicFalse(index) {
 
 function renderPaperBin(element, dell) {
     if (dell == false) {
-        return `<img onclick="deleteNote(${element['id']})" src="../img/close.svg"></img>`;
+        return `<img onclick="deleteNote(${element['id']})" src="./img/close.svg"></img>`;
         // return `<button onclick="deleteNote(${element['id']})">Dell</button>`;
     } else {
-        return `<img onclick="paperBinNote(${element['id']})" src="../img/paperBin.png"></img>`;
+        return `<img onclick="paperBinNote(${element['id']})" src="./img/paperBin.png"></img>`;
         // return `<button onclick="paperBinNote(${element['id']})">Paperbin</button>`;
     }
 

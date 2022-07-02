@@ -94,7 +94,7 @@ function renderAvatar() {
     for (let i = 0; i < avatarArray.length; i++) {
         avatar.innerHTML +=
             `
-            <a href="#" onclick="avatarSelect(${i})"><img id="${i}" src="../img/${avatarArray[i]}.png"></a>
+            <a href="#" onclick="avatarSelect(${i})"><img id="${i}" src="./img/${avatarArray[i]}.png"></a>
             `;
     }
     avatar.innerHTML += '<input id="checkbox" class="checkbox_round" required type="checkbox"></input>';

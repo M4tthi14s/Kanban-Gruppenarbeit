@@ -42,7 +42,7 @@ function renderAvatarPicTrue(i) {
         for (let j = 0; j < allTasksArray[i].names.length; j++) {
             document.getElementById('backlogAvatar_' + i).innerHTML +=
                 `<div class="avatarPicTitle">
-                    <img class="backlogImg" src="../img/${allTasksArray[i].names[j]}.png">
+                    <img class="backlogImg" src="./img/${allTasksArray[i].names[j]}.png">
                     <h2>${letterName(i, j)}</h2>
                 </div>`;
         }
