@@ -2,7 +2,8 @@
     display: none;
     flex-direction: column;
     margin: 16px;
-    width: 100%;
+    /* width: 100%; */
+    width: 900px;
 }
 
 .headlineBacklog h2 {

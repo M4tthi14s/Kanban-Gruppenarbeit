@@ -1,7 +1,8 @@
 .board {
     display: none;
     flex-direction: column;
-    width: 100%;
+    /* width: 100%; */
+    width: 900px;
 }
 
 .headlineBoard {
@@ -36,9 +37,6 @@
     margin-right: 8px;
 }
 
-.donePage {
-    margin-left: 8px;
-}
 
 .trashPage {
     width: 100%;
