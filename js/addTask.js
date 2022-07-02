@@ -35,6 +35,11 @@ async function addTask() {
         id = (index) + 1;
     }
 
+    let color;
+    if(urgency=='High'){color='#ff9393'};
+    if(urgency=='Normal'){color='#ffcc6d'};
+    if(urgency=='Low'){color='#95ff95'};
+
     let task = {
         'title': title.value,
         'names': names,
@@ -44,7 +49,8 @@ async function addTask() {
         'createAt': dateFormatDE(),
         'backlog': true,
         'id': id,
-        'board': 'toDo'
+        'board': 'toDo',
+        'color': color
     };
 
     title.value = '';

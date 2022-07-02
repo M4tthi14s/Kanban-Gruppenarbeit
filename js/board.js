@@ -1,6 +1,6 @@
 function generateTodoHTML(element) {
     return `
-            <div draggable="true" ondragstart="startDragging(${element['id']})" class="boardTask">
+            <div draggable="true" ondragstart="startDragging(${element['id']})" class="boardTask" style="background-color: ${element['color']};">
                 <div id="toDoTask_${element['id']}">
                     <div draggable="true" class="note" id="task_${element['id']}">
                         <h2>Title: ${element['title']}</h2>

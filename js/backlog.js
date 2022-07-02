@@ -7,7 +7,7 @@ function backlogList() {
         if (allTasksArray[i].backlog == true) {
             task.innerHTML +=
                 `
-            <div class="task" id="task_${i}">
+            <div class="task" id="task_${i}" style="background-color: ${allTasksArray[i].color};">
                 <div id="backlogAvatar_${i}" class="backlogTitle"></div>
                 <div class="backlogAssignedTo"><h2>${allTasksArray[i].title}</h2></div>
 
@@ -60,14 +60,8 @@ async function taskPushToBoard(id) {
             element.parentNode.removeChild(element);
 
             await backend.setItem('allTasksArray', JSON.stringify(allTasksArray));
-
-
-
         }
-
     }
-
-
     allTasksArray[id].backlog = false;
     let element = document.getElementById('task_' + id);
     element.parentNode.removeChild(element);

@@ -83,6 +83,7 @@
     height: 24px;
     border: 1.4px solid rgb(128, 128, 128);
     border-radius: 4px;
+    background-color: #ffffff73;
 }
 
 .paperBinImg img:hover {
