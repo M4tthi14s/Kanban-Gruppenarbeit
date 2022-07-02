@@ -23,6 +23,21 @@
 .testingPage,
 .donePage {
     width: 24%;
+
+    background-color: rgb(224, 224, 224);
+    height: 100%;
+
+    border-radius: 8px;
+}
+
+.toDoPage,
+.inProgressPage,
+.testingPage {
+    margin-right: 8px;
+}
+
+.donePage {
+    margin-left: 8px;
 }
 
 .trashPage {
@@ -48,10 +63,22 @@
 
 .column {
     /* width: 150px; */
-    background-color: rgb(224, 224, 224);
+    padding: 8px;
+    /* background-color: rgb(224, 224, 224);
     height: 100%;
     padding: 8px;
-    border-radius: 8px;
+    border-radius: 8px; */
+}
+
+.toDoPageH2,
+.inProgressPageH2,
+.testingPageH2,
+.donePageH2 {
+    background-color: #b0baeb;
+    margin: 0px 0px 12px 0px;
+    padding: 12px 0px;
+    border-radius: 8px 8px 0px 0px;
+    text-align: center;
 }
 
 .titleBoard {
