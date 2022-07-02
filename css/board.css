@@ -62,10 +62,10 @@
 .column {
     /* width: 150px; */
     padding: 8px;
-    /* background-color: rgb(224, 224, 224);
-    height: 100%;
-    padding: 8px;
-    border-radius: 8px; */
+    background-color: rgb(224, 224, 224);
+    height: calc(100% - 50px);
+    /* padding: 8px; */
+    border-radius: 8px;
 }
 
 .toDoPageH2,
@@ -91,6 +91,7 @@
     text-align: center;
     border: 1px solid #646464;
     border-radius: 4px;
+    margin-bottom: 8px !important;
 }
 
 .note p {
@@ -104,6 +105,7 @@
     font-weight: 500;
     background-color: #ffffff75;
     text-align: center;
+    border-radius: 2px;
 }
 
 .titleBoardFirst {
@@ -117,7 +119,8 @@
 .note h2 {
     margin: 0px;
     font-size: 16px;
-    margin-bottom: 16px;
+    /* margin-bottom: 6px; */
+    font-weight: 500;
 }
 
 
@@ -128,7 +131,7 @@
     background-color: rgb(255, 255, 255);
     margin-bottom: 8px;
     padding: 8px;
-    border-radius: 4px;
+    border-radius: 8px;
     transition: all 125ms linear;
 }
 
@@ -138,7 +141,7 @@
 }
 
 .box_Highlight {
-    border-radius: 4px;
+    border-radius: 8px;
     background-color: rgb(199 199 199);
 }
 
@@ -152,10 +155,13 @@
     border: 1.4px solid rgb(128, 128, 128);
     border-radius: 4px;
     background-color: #ffffff73;
+    transition: all 125ms linear;
 }
 
 .paperBinImg img:hover {
     border: 1.4px solid #1e3190;
+    transform: scale(1.2);
+    transition: all 125ms linear;
 }
 
 .avatarContainerBoard {
