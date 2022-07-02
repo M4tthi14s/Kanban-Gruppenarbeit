@@ -7,7 +7,7 @@ async function init() {
     allTasksArray = JSON.parse(backend.getItem('allTasksArray')) || [];
 
     
-    backlogList();
+    // backlogList();
     // renderToDo();
     // setTimeout();
 }
