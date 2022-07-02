@@ -1,15 +1,19 @@
 function generateTodoHTML(element) {
     return `
-            <div draggable="true" ondragstart="startDragging(${element['id']})" class="todo">
+            <div draggable="true" ondragstart="startDragging(${element['id']})" class="boardTask" style="background-color: ${element['color']};">
                 <div id="toDoTask_${element['id']}">
                     <div draggable="true" class="note" id="task_${element['id']}">
-                        <h2>Title: ${element['title']}</h2>
-                        <div id="backlogAvatar_${element['id']}"></div>
-
-                        <h2 id="task_${element['id']}">${element['category']}</h2>
+                        <div class="titleBoard">
+                            <div>
+                                <h3 class="titleBoardFirst">Title:</h3>
+                                <h2>${element['title']}</h2>
+                            </div>
+                            <div class="paperBinImg" id="paperBin_${element['id']}"></div> 
+                        </div>
+                        <h2 class="categoryBoard" id="task_${element['id']}">${element['category']}</h2>
+                        <h3 class="titleBoardSecond">Description:</h3>
                         <p>${element['description']}</p>
-                        <div id="paperBin_${element['id']}"></div>
-  
+                        <div class="avatarContainerBoard" id="backlogAvatar_${element['id']}"></div>
                     </div>
                 </div>
             </div>
@@ -30,7 +34,7 @@ function renderAvatarPicFalse(index) {
     for (let j = 0; j < allTasksArray[num].names.length; j++) {
 
         document.getElementById('backlogAvatar_' + index).innerHTML +=
-            `<div class="avatarPicTitle">
+            `<div class="avatarPicTitleBord">
                     <img class="backlogImg" src="../img/${allTasksArray[num].names[j]}.png">
                     <h2>${letterName(num, j)}</h2>
                 </div>`;
@@ -43,9 +47,11 @@ function renderAvatarPicFalse(index) {
 
 function renderPaperBin(element, dell) {
     if (dell == false) {
-        return `<button onclick="deleteNote(${element['id']})">Dell</button>`;
+        return `<img onclick="deleteNote(${element['id']})" src="../img/close.svg"></img>`;
+        // return `<button onclick="deleteNote(${element['id']})">Dell</button>`;
     } else {
-        return `<button onclick="paperBinNote(${element['id']})">Paperbin</button>`;
+        return `<img onclick="paperBinNote(${element['id']})" src="../img/paperBin.png"></img>`;
+        // return `<button onclick="paperBinNote(${element['id']})">Paperbin</button>`;
     }
 
 }

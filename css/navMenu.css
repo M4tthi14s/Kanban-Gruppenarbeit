@@ -21,8 +21,39 @@
     margin: 0px 16px;
 }
 
-.searchTitle {
+.searchContainer {
     display: none;
+    align-items: center;
+    width: 220px;
+    height: 32px;
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid #999999;
+
+}
+
+.searchTitle {
+    display: flex;
+    border: none;
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+}
+
+.searchContainer img {
+    width: 24px;
+    height: 24px;
+    margin: 0px 6px;
+}
+
+.toggle {
+    display: flex;
+}
+
+.toggle a {
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
 }
 
 #paperBin {
@@ -34,7 +65,6 @@
     height: 32px;
     background: #dcdcdc;
     border-radius: 6px;
-    margin-right: 16px;
 }
 
 .navBarImg {
@@ -42,7 +72,6 @@
     height: 32px;
     background: #dcdcdc;
     border-radius: 6px;
-    margin-right: 16px;
 }
 
 .regulations {

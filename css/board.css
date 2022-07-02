@@ -1,7 +1,8 @@
 .board {
     display: none;
     flex-direction: column;
-    width: 100%;
+    /* width: 100%; */
+    width: 900px;
 }
 
 .headlineBoard {
@@ -14,7 +15,31 @@
 
 .boardContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    margin: 16px;
+}
+
+.toDoPage,
+.inProgressPage,
+.testingPage,
+.donePage {
+    width: 24%;
+
+    background-color: rgb(224, 224, 224);
+    height: 100%;
+
+    border-radius: 8px;
+}
+
+.toDoPage,
+.inProgressPage,
+.testingPage {
+    margin-right: 8px;
+}
+
+
+.trashPage {
+    width: 100%;
     margin: 16px;
 }
 
@@ -35,25 +60,120 @@
 }
 
 .column {
-    width: 150px;
-    background-color: rgb(224, 224, 224);
+    /* width: 150px; */
+    padding: 8px;
+    /* background-color: rgb(224, 224, 224);
     height: 100%;
+    padding: 8px;
+    border-radius: 8px; */
+}
+
+.toDoPageH2,
+.inProgressPageH2,
+.testingPageH2,
+.donePageH2,
+.trashPageH2 {
+    background-color: #b0baeb;
+    margin: 0px 0px 12px 0px;
+    padding: 12px 0px;
+    border-radius: 8px 8px 0px 0px;
+    text-align: center;
+}
+
+.titleBoard {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.categoryBoard {
+    background-color: #ffffff6e;
+    text-align: center;
+    border: 1px solid #646464;
+    border-radius: 4px;
+}
+
+.note p {
+    margin: 0px 0px 8px 0px;
+    font-size: 16px;
+}
+
+.note h3 {
+    margin: 0px;
+    font-size: 10px;
+    font-weight: 500;
+    background-color: #ffffff75;
+    text-align: center;
+}
+
+.titleBoardFirst {
+    width: 28px;
+}
+
+.titleBoardSecond {
+    width: 56px;
 }
 
 .note h2 {
     margin: 0px;
     font-size: 16px;
+    margin-bottom: 16px;
 }
 
-.todo {
-    border: 1px solid black;
+
+
+.boardTask {
+    border: 1.6px solid #cbcbcb;
     cursor: pointer;
     background-color: rgb(255, 255, 255);
     margin-bottom: 8px;
     padding: 8px;
     border-radius: 4px;
+    transition: all 125ms linear;
+}
+
+.boardTask:hover {
+    transform: scale(1.02);
+    transition: all 125ms linear;
 }
 
 .box_Highlight {
-    background-color: rgb(148, 148, 148);
+    border-radius: 4px;
+    background-color: rgb(199 199 199);
+}
+
+.paperBinImg {
+    text-align: end;
+}
+
+.paperBinImg img {
+    width: 20px;
+    height: 20px;
+    border: 1.4px solid rgb(128, 128, 128);
+    border-radius: 4px;
+    background-color: #ffffff73;
+}
+
+.paperBinImg img:hover {
+    border: 1.4px solid #1e3190;
+}
+
+.avatarContainerBoard {
+    display: flex;
+    justify-content: end;
+}
+
+.avatarContainerBoard img {
+    margin-right: 6px;
+}
+
+.avatarContainerBoard h2 {
+    margin: 6px 6px 0px 0px;
+    font-size: 10px;
+}
+
+.avatarPicTitleBord {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

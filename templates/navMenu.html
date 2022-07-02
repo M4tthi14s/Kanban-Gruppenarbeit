@@ -8,7 +8,8 @@
         <a class="menuLink" onclick="menuLink('howTo')" href="#">Help</a>
     </div>
 
-    <div id="hideSearchTitle">
+    <div id="hideSearchTitle" class="searchContainer">
+        <img src="../img/search.svg" alt="search">
         <input class="searchTitle" id="searchTitle" onkeyup="searchTitle()" type="text" placeholder="Search Title">
         <div id="outputSearch"></div>
     </div>
@@ -19,9 +20,11 @@
         <a class="menuLink" onclick="menuLink('privacy')" href="#">Datenschutzerklärung</a>
     </div>
 
-    <div id="hidePaperBin">
-        <a onclick="paperBin()" id="paperBin" href="#"><img class="paperBin" src="../img/paperBin.png"></a>
+    <div class="toggle">
+        <div id="hidePaperBin">
+            <a onclick="paperBin()" id="paperBin" href="#"><img class="paperBin" src="../img/paperBin.png"></a>
+        </div>
+        <a onclick="navBar()" href="#"><img class="navBarImg" src="../img/Menu.svg"></a>
     </div>
-    <a onclick="navBar()" href="#"><img class="navBarImg" src="../img/Menu.svg"></a>
 
 </div>
