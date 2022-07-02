@@ -6,7 +6,7 @@ async function init() {
     await downloadFromServer();
     allTasksArray = JSON.parse(backend.getItem('allTasksArray')) || [];
 
-    renderAvatar();
+    
     backlogList();
     // renderToDo();
     // setTimeout();
@@ -55,6 +55,7 @@ async function addTask() {
     await backend.setItem('allTasksArray', JSON.stringify(allTasksArray));
 
     init();
+    renderAvatar();
 }
 
 

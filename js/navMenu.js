@@ -51,20 +51,25 @@ function searchTitle() {
     let list = document.getElementById('outputSearch');
     list.innerHTML = '';
 
-    for (let i = 0; i < allTasksArray.length; i++) {
+    for (let i = 1; i < allTasksArray.length; i++) {
+        
         const currentItem = allTasksArray[i].title.toLowerCase();
-
+        
         if (currentItem.toLowerCase().includes(search) && search.length > 0) {
             list.innerHTML +=
                 `
                 <ul><a onclick="closeSearch()" href="#jump${i}">${currentItem}</a></ul>
                 `;
+                console.log(currentItem)
         }
+      
 
         if (search.length < 0) {
             document.getElementById('outputSearch').innerHTML = '';
             document.getElementById('searchInput').value = '';
         }
+
+
     };
 }
 
