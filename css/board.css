@@ -73,7 +73,8 @@
 .toDoPageH2,
 .inProgressPageH2,
 .testingPageH2,
-.donePageH2 {
+.donePageH2,
+.trashPageH2 {
     background-color: #b0baeb;
     margin: 0px 0px 12px 0px;
     padding: 12px 0px;
@@ -139,6 +140,7 @@
 }
 
 .box_Highlight {
+    border-radius: 4px;
     background-color: rgb(199 199 199);
 }
 
