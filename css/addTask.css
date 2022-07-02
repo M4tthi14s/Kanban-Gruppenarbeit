@@ -166,3 +166,31 @@
 /* .checkbox_round:checked {
     border: 2px solid rgb(115, 115, 115);
 } */
+
+@media (max-width: 550px) {
+
+    .addTaskTitle,
+    .addTaskCategory,
+    .description {
+        flex-direction: column;
+    }
+
+    .addTaskForm {
+        width: auto;
+    }
+
+    .dueDate,
+    .avatarContainer {
+        margin: 0px;
+    }
+
+    .addTaskTitle h2,
+    .addTaskCategory h2,
+    .description h2 {
+        margin-top: 12px;
+    }
+
+    .addTask {
+        margin-bottom: 12px;
+    }
+}
