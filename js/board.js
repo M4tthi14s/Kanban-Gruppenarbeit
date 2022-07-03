@@ -10,6 +10,7 @@ function generateTodoHTML(element) {
                             </div>
                             <div class="paperBinImg" id="paperBin_${element['id']}"></div> 
                         </div>
+                        <h2 class="createAt">${element['createAt']}</h2>
                         <h2 class="categoryBoard" id="task_${element['id']}">${element['category']}</h2>
                         <h3 class="titleBoardSecond">Description:</h3>
                         <p>${element['description']}</p>

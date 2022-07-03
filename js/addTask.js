@@ -5,11 +5,6 @@ let allTasksArray = [{}];
 async function init() {
     await downloadFromServer();
     allTasksArray = JSON.parse(backend.getItem('allTasksArray')) || [];
-
-    
-    // backlogList();
-    // renderToDo();
-    // setTimeout();
 }
 
 
@@ -36,9 +31,9 @@ async function addTask() {
     }
 
     let color;
-    if(urgency=='High'){color='#ff9393'};
-    if(urgency=='Normal'){color='#ffcc6d'};
-    if(urgency=='Low'){color='#95ff95'};
+    if (urgency == 'High') { color = '#ff9393' };
+    if (urgency == 'Normal') { color = '#ffcc6d' };
+    if (urgency == 'Low') { color = '#95ff95' };
 
     let task = {
         'title': title.value,
@@ -62,6 +57,7 @@ async function addTask() {
 
     init();
     renderAvatar();
+    document.getElementById("myForm").reset();
 }
 
 
@@ -79,7 +75,7 @@ function avatarSelect(index) {
 
 
     if (names.length == 0) {
-        document.getElementById('checkbox').setAttribute("required", "");  
+        document.getElementById('checkbox').setAttribute("required", "");
     }
 
     if (names.length > 0) {

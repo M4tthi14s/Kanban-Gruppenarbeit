@@ -114,6 +114,8 @@
     .backlogTitle {
         flex-direction: row;
         width: auto;
+        flex-flow: wrap;
+        justify-content: center;
     }
 
     .backlogAssignedTo,

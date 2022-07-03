@@ -1,5 +1,6 @@
 <div id="boardContainer" class="boardContainer">
 
+    <!-- <div class="boardContainerTop"> -->
     <div id="toDoPage" class="toDoPage">
         <h2 class="toDoPageH2">TODO</h2>
         <div class="column" id="toDo" ondrop="moveTo('toDo')" ondragleave="removeHighlight('toDo')"
@@ -12,7 +13,9 @@
             ondragover="allowDrop(event); highlight('inProgress')">
         </div>
     </div>
+<!-- </div> -->
 
+<!-- <div class="boardContainerBottom"> -->
     <div id="testingPage" class="testingPage">
         <h2 class="testingPageH2">TESTING</h2>
         <div class="column" id="testing" ondrop="moveTo('testing')" ondragleave="removeHighlight('testing')"
@@ -24,6 +27,7 @@
         <div class="column" id="done" ondrop="moveTo('done')" ondragleave="removeHighlight('done')"
             ondragover="allowDrop(event); highlight('done')"></div>
     </div>
+<!-- </div> -->
 
 </div>
 
