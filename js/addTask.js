@@ -15,6 +15,7 @@ function formValidationAddTask() {
     addTask();
 }
 
+
 /**
  * adds tasks in array
  */
@@ -24,13 +25,15 @@ async function addTask() {
     let category = document.getElementById('category').value;
     let urgency = document.getElementById('urgency').value;
 
-    let id;
-    if (!allTasksArray[1]) { id = 1 }
+    let idNum;
+    // chack(idNum);
+
+    if (!allTasksArray[1]) { idNum = 1 }
     else {
         let number = allTasksArray.length;
         number = number - 1;
-        let index = allTasksArray[number].id
-        id = (index) + 1;
+        let index = allTasksArray[number].idNum
+        idNum = (index) + 1;
     }
 
     let color;
@@ -46,7 +49,7 @@ async function addTask() {
         'urgency': urgency,
         'createAt': dateFormatDE(),
         'backlog': true,
-        'id': id,
+        'id': idNum,
         'board': 'toDo',
         'color': color
     };
@@ -63,6 +66,16 @@ async function addTask() {
     document.getElementById("myForm").reset();
 }
 
+function chack(idNum){
+    if (!allTasksArray[1]) { idNum = 1 }
+    else {
+        let number = allTasksArray.length;
+        number = number - 1;
+        let index = allTasksArray[number].idNum
+        idNum = (index) + 1;
+    }
+    return idNum;
+}
 
 let avatarArray = ['Bob_Marley', 'Lisa_Brennon', 'Mili_Vanilli', 'Ron_Stevens', 'Ula_Kockambrink', 'Wolf_Belford'];
 let names = [];
