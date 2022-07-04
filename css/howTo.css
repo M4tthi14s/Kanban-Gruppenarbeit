@@ -140,3 +140,45 @@ li ol {
 
 
 }
+
+@media only screen and (max-width: 300px) {
+
+    .HowToCenter {
+        flex-direction: column;
+        color: whitesmoke;
+        margin: 20px 20px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        font-size: smaller;
+        margin-bottom: 100px;
+    }
+
+
+    .descriptionImg1 img{
+        width: 150px;
+        height: 105px;
+
+    }
+
+    .descriptionImg2 img{
+        width: 150px;
+        height: 65px;
+
+    }
+
+    .descriptionImg3 img{
+        width: 150px;
+        height: 84px;
+        margin-bottom: 50px;
+    }
+    .h2Color {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 80px;
+        color: whitesmoke;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+    }
+
+
+}
