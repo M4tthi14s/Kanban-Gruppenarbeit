@@ -3,13 +3,13 @@
     flex-direction: column;
     /* width: 100%; */
     width: 900px;
-    margin-top: 136px;
+    margin-top: 157px;
     margin-left: 16px;
     
 }
 .background{
     background-image: url(../img/board.jpg);
-    background-size: cover ;
+    background-size: cover;
     position: fixed;
     background-repeat: no-repeat;
     top: 0;
