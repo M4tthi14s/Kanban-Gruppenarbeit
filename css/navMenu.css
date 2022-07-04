@@ -19,6 +19,17 @@
     color: white;
     text-decoration: none;
     margin: 0px 16px;
+    transition: all 125ms linear;
+}
+
+.menuLink:hover {
+    transition: all 125ms linear;
+    transform: scale(1.04);
+    text-decoration: underline;
+}
+
+.menuSelection {
+    display: flex;
 }
 
 .searchContainer {
@@ -80,4 +91,17 @@
 
 .d-none {
     display: none !important;
+}
+
+@media (max-width: 520px) {
+
+    .menuSelection,
+    .regulations {
+        flex-direction: column;
+    }
+
+    .navMenu {
+        height: 100px;
+    }
+
 }

@@ -10,8 +10,8 @@ function menuLink(index) {
 
 function showLink(index) {
     document.getElementById(index).style.display = 'flex';
-    if (index == 'board' || index == 'backlog') { document.getElementById('hideSearchTitle').style.display = 'flex'; }
-    else { document.getElementById('hideSearchTitle').style.display = 'none'; }
+    // if (index == 'board' || index == 'backlog') { document.getElementById('hideSearchTitle').style.display = 'flex'; }
+    // else { document.getElementById('hideSearchTitle').style.display = 'none'; }
     if (index == 'board') { document.getElementById('paperBin').style.display = 'flex'; }
     else { document.getElementById('paperBin').style.display = 'none'; }
 }
@@ -25,7 +25,7 @@ function hideLink(menuLinkArray) {
 function navBar() {
     document.getElementById('regulations').classList.toggle('d-none');
     document.getElementById('menuSelection').classList.toggle('d-none');
-    document.getElementById('hideSearchTitle').classList.toggle('d-none');
+    // document.getElementById('hideSearchTitle').classList.toggle('d-none');
     document.getElementById('hidePaperBin').classList.toggle('d-none');
 }
 

@@ -23,7 +23,8 @@
 .inProgressPage,
 .testingPage,
 .donePage {
-    width: 24%;
+    /* width: 24%; */
+    width: 160px;
 
     background-color: rgb(224, 224, 224);
     height: 100%;
@@ -190,7 +191,7 @@
     align-items: center;
 }
 
-@media (max-width: 580px) {
+@media (max-width: 720px) {
     .boardContainer {
         flex-direction: row;
         flex-wrap: wrap;
@@ -200,7 +201,7 @@
     .inProgressPage,
     .testingPage,
     .donePage {
-        width: auto;
+        /* width: auto; */
         margin: 8px;
     }
 
