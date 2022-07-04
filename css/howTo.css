@@ -43,11 +43,17 @@
     font-size: 40px;
     margin-bottom: 80px;
     color: whitesmoke;
-    ;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }
 
 .BGcolor {
 
     z-index: -3;
     background-color: rgba(0, 0, 0, 0.939);
+}
+li lo {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+
 }
