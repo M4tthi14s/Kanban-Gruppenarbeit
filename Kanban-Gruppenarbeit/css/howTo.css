@@ -1,0 +1,51 @@
+.howTo {
+    display: none;
+}
+
+.HowToCenter{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+li{
+    color: whitesmoke;
+    margin: 20px 20px ;
+}
+
+hr{
+    margin: 100px 200px;
+    width: 90vw;
+}
+
+.main {
+
+
+    margin: 0;
+    background-image: url("../board-bg.jpeg");
+    z-index: 30000;
+    opacity: 0.8;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    margin-bottom: 100px;
+  }
+.blockCenter{
+
+    display: flex;
+align-items: center;
+flex-direction: column;
+}
+
+
+.h2Color{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 80px;
+    color: whitesmoke;;
+}
+
+.BGcolor{
+
+z-index: -3;
+    background-color: rgba(0, 0, 0, 0.939);
+}
