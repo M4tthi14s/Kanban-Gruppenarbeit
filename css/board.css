@@ -67,6 +67,7 @@
     height: calc(100% - 50px);
     /* padding: 8px; */
     border-radius: 8px;
+    min-height: 50vh;
 }
 
 .toDoPageH2,
