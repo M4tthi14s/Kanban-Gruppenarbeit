@@ -7,6 +7,18 @@
     font-size: 16px;
     color: #1e3190;
 }
+.bkg-addTask{
+    background-image: url(../img/tasks.jpg);
+    background-size: cover;
+    position: fixed;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -100;
+    opacity: 0.6;
+}
 
 .addTaskForm {
     display: flex;
