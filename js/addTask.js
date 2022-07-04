@@ -1,6 +1,8 @@
 setURL('https://sebastian-gamroth.developerakademie.net/smallest_backend_ever-master/');
 
+
 let allTasksArray = [{}];
+
 
 async function init() {
     await downloadFromServer();
@@ -25,16 +27,7 @@ async function addTask() {
     let category = document.getElementById('category').value;
     let urgency = document.getElementById('urgency').value;
 
-    let idNum;
-    // chack(idNum);
-
-    if (!allTasksArray[1]) { idNum = 1 }
-    else {
-        let number = allTasksArray.length;
-        number = number - 1;
-        let index = allTasksArray[number].idNum
-        idNum = (index) + 1;
-    }
+    let idNum = Math.round(Date.now() / 1000);
 
     let color;
     if (urgency == 'High') { color = '#ff9393' };
@@ -66,19 +59,10 @@ async function addTask() {
     document.getElementById("myForm").reset();
 }
 
-function chack(idNum){
-    if (!allTasksArray[1]) { idNum = 1 }
-    else {
-        let number = allTasksArray.length;
-        number = number - 1;
-        let index = allTasksArray[number].idNum
-        idNum = (index) + 1;
-    }
-    return idNum;
-}
 
 let avatarArray = ['Bob_Marley', 'Lisa_Brennon', 'Mili_Vanilli', 'Ron_Stevens', 'Ula_Kockambrink', 'Wolf_Belford'];
 let names = [];
+
 
 function avatarSelect(index) {
     document.getElementById(index).classList.toggle('avatarAddTaskToggle');

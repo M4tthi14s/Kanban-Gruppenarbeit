@@ -2,7 +2,7 @@ function backlogList() {
     let task = document.getElementById('backlogList');
     task.innerHTML = '';
 
-    for (let i = 1; i < allTasksArray.length; i++) {
+    for (let i = 0; i < allTasksArray.length; i++) {
 
         if (allTasksArray[i].backlog == true) {
             task.innerHTML += renderBacklogList(i);
