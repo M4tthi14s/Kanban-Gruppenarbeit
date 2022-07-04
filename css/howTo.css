@@ -16,9 +16,6 @@
     font-weight: bold;
 }
 
-
-
-
 .main {
     margin: 0;
     background-image: url("../img/board-bg.jpg");
@@ -69,19 +66,19 @@ li ol {
     }
 
 
-    .descriptionImg1 img{
+    .descriptionImg1 img {
         width: 700px;
         height: 480px;
 
     }
 
-    .descriptionImg2 img{
+    .descriptionImg2 img {
         width: 700px;
         height: 300px;
 
     }
 
-    .descriptionImg3 img{
+    .descriptionImg3 img {
         width: 750px;
         height: 400px;
 
@@ -112,23 +109,24 @@ li ol {
     }
 
 
-    .descriptionImg1 img{
+    .descriptionImg1 img {
         width: 300px;
         height: 210px;
 
     }
 
-    .descriptionImg2 img{
+    .descriptionImg2 img {
         width: 300px;
         height: 130px;
 
     }
 
-    .descriptionImg3 img{
+    .descriptionImg3 img {
         width: 300px;
         height: 168px;
         margin-bottom: 50px;
     }
+
     .h2Color {
         text-align: center;
         font-size: 30px;
@@ -154,23 +152,24 @@ li ol {
     }
 
 
-    .descriptionImg1 img{
-        width: 150px;
-        height: 105px;
+    .descriptionImg1 img {
+        width: 200px;
+        height: 138px;
 
     }
 
-    .descriptionImg2 img{
-        width: 150px;
-        height: 65px;
+    .descriptionImg2 img {
+        width: 200px;
+        height: 87px;
 
     }
 
-    .descriptionImg3 img{
-        width: 150px;
-        height: 84px;
+    .descriptionImg3 img {
+        width: 200px;
+        height: 112px;
         margin-bottom: 50px;
     }
+
     .h2Color {
         text-align: center;
         font-size: 20px;
@@ -185,7 +184,7 @@ li ol {
     li ol {
         font-family: 'Roboto', sans-serif;
         font-weight: bold;
-    font-size: x-small;
+        font-size: x-small;
     }
 
 }
