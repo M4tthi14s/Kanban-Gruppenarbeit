@@ -1,3 +1,14 @@
+.backlogBackground {
+    position: absolute;
+    background-image: url(../img/backlog.jpg);
+    background-size: cover;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
 .backlog {
     display: none;
     flex-direction: column;
@@ -55,10 +66,6 @@
     margin-bottom: 12px;
 }
 
-/* .placeholderBacklogLeft {
-    width: 92px;
-} */
-
 .placeholderBacklogRight {
     width: 107px;
 }
@@ -66,7 +73,7 @@
 .task {
     display: flex;
     justify-content: space-between;
-    border: 1.6px solid #cbcbcb;
+    border: 1.6px solid #858585;
     border-radius: 8px;
     margin-bottom: 8px;
     padding: 6px 2px;
