@@ -90,7 +90,7 @@ li ol {
     .h2Color {
         text-align: center;
         font-size: 35px;
-        margin-bottom: 80px;
+        margin-bottom: 70px;
         color: whitesmoke;
         font-family: 'Roboto', sans-serif;
         font-weight: bold;
@@ -132,7 +132,7 @@ li ol {
     .h2Color {
         text-align: center;
         font-size: 30px;
-        margin-bottom: 80px;
+        margin-bottom: 50px;
         color: whitesmoke;
         font-family: 'Roboto', sans-serif;
         font-weight: bold;
@@ -174,11 +174,18 @@ li ol {
     .h2Color {
         text-align: center;
         font-size: 20px;
-        margin-bottom: 80px;
+        margin-bottom: 40px;
         color: whitesmoke;
         font-family: 'Roboto', sans-serif;
         font-weight: bold;
+        font-size: medium;
     }
 
+
+    li ol {
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+    font-size: x-small;
+    }
 
 }
