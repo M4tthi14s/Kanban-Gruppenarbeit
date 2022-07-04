@@ -14,12 +14,9 @@
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
 }
-}
-
-.main hr {
 
 
-}
+
 
 .main {
     margin: 0;
@@ -88,11 +85,20 @@ li ol {
 
     }
 
+    .h2Color {
+        text-align: center;
+        font-size: 35px;
+        margin-bottom: 80px;
+        color: whitesmoke;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+    }
+
 
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
 
     .HowToCenter {
         flex-direction: column;
@@ -104,21 +110,29 @@ li ol {
 
 
     .descriptionImg1 img{
-        width: 500px;
-        height: 350px;
+        width: 300px;
+        height: 210px;
 
     }
 
     .descriptionImg2 img{
-        width: 500px;
-        height: 180px;
+        width: 300px;
+        height: 108px;
 
     }
 
     .descriptionImg3 img{
-        width: 500px;
-        height: 280px;
+        width: 300px;
+        height: 168px;
 
+    }
+    .h2Color {
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 80px;
+        color: whitesmoke;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
     }
 
 
