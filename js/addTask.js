@@ -1,6 +1,8 @@
 setURL('https://sebastian-gamroth.developerakademie.net/smallest_backend_ever-master/');
 
+
 let allTasksArray = [{}];
+
 
 async function init() {
     await downloadFromServer();
@@ -77,8 +79,10 @@ function chack(idNum){
     return idNum;
 }
 
+
 let avatarArray = ['Bob_Marley', 'Lisa_Brennon', 'Mili_Vanilli', 'Ron_Stevens', 'Ula_Kockambrink', 'Wolf_Belford'];
 let names = [];
+
 
 function avatarSelect(index) {
     document.getElementById(index).classList.toggle('avatarAddTaskToggle');
