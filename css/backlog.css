@@ -14,6 +14,18 @@
     color: rgb(50 50 50);
 }
 
+.empty {
+    width: 92px;
+}
+
+.headlineBacklog h3 {
+    font-size: 16px;
+    margin: 16px;
+    width: 58px;
+    text-align: center;
+    color: rgb(50 50 50);
+}
+
 .backlogTitle {
     display: flex;
     flex-direction: column;
@@ -43,9 +55,9 @@
     margin-bottom: 12px;
 }
 
-.placeholderBacklogLeft {
+/* .placeholderBacklogLeft {
     width: 92px;
-}
+} */
 
 .placeholderBacklogRight {
     width: 107px;
@@ -102,8 +114,10 @@
         flex-direction: column;
     }
 
-    .headlineBacklog h2 {
+    .headlineBacklog h2,
+    .headlineBacklog h3 {
         width: auto;
+        margin: 6px;
     }
 
     .task {
