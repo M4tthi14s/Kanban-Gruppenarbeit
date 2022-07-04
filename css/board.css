@@ -3,14 +3,21 @@
     flex-direction: column;
     /* width: 100%; */
     width: 900px;
+    margin-top: 136px;
+    margin-left: 16px;
     
 }
-/* .distributor{
-    width: 100vh;
-    height: 100vh;
-    background-image: url(../img/board-bkg.jpg);
-    background-size: auto; */
-
+.background{
+    background-image: url(../img/board.jpg);
+    background-size: cover ;
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -100;
+    }
 
 .headlineBoard {
     text-align: center;
