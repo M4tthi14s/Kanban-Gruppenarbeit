@@ -113,9 +113,7 @@ function startDragging(id) {
 function allowDrop(ev) {
     ev.preventDefault();
 }
-
 function moveTo(board) {
-
     for (let i = 0; i < allTasksArray.length; i++) {
         const content = allTasksArray[i].id;
        
