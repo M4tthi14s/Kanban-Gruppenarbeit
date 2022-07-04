@@ -5,8 +5,15 @@ function backlogList() {
     for (let i = 1; i < allTasksArray.length; i++) {
 
         if (allTasksArray[i].backlog == true) {
-            task.innerHTML +=
-                `
+            task.innerHTML += renderBacklogList(i);
+        }
+        renderAvatarPicTrue(i);
+    };
+}
+
+
+function renderBacklogList(i) {
+    return `
             <div class="task" id="task_${i}" style="background-color: ${allTasksArray[i].color};">
                 <div id="backlogAvatar_${i}" class="backlogTitle"></div>
                 <div class="backlogAssignedTo"><h2>${allTasksArray[i].title}</h2></div>
@@ -18,9 +25,6 @@ function backlogList() {
                 </button>
             </div>
             `;
-        }
-        renderAvatarPicTrue(i);
-    };
 }
 
 
@@ -52,6 +56,17 @@ function renderAvatarPicTrue(i) {
 
 async function taskPushToBoard(id) {
 
+    selectTaskPushToBoard(id);
+
+    allTasksArray[id].backlog = false;
+    let element = document.getElementById('task_' + id);
+    element.parentNode.removeChild(element);
+
+    await backend.setItem('allTasksArray', JSON.stringify(allTasksArray));
+}
+
+
+async function selectTaskPushToBoard(id) {
     for (let i = 0; i < allTasksArray.length; i++) {
         const content = allTasksArray[i];
         if (content == id) {
@@ -62,9 +77,4 @@ async function taskPushToBoard(id) {
             await backend.setItem('allTasksArray', JSON.stringify(allTasksArray));
         }
     }
-    allTasksArray[id].backlog = false;
-    let element = document.getElementById('task_' + id);
-    element.parentNode.removeChild(element);
-
-    await backend.setItem('allTasksArray', JSON.stringify(allTasksArray));
 }
