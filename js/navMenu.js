@@ -31,17 +31,9 @@ function navBar() {
 
 
 function paperBin() {
-    // document.getElementById('toDoPage').classList.toggle('d-none');
-    // document.getElementById('inProgressPage').classList.toggle('d-none');
-    // document.getElementById('testingPage').classList.toggle('d-none');
-    // document.getElementById('donePage').classList.toggle('d-none');
-    // document.getElementById('trashPage').classList.toggle('d-none');
-
     document.getElementById('boardContainer').classList.toggle('d-none');
     document.getElementById('trashContainer').classList.toggle('d-none');
 }
-
-
 
 
 function searchTitle() {
