@@ -37,7 +37,15 @@
 .addTask h1 {
     font-size: 20px;
     color: rgb(50 50 50);
-    text-align: center;
+    margin-bottom: 8px;
+}
+
+.addTask h4 {
+    font-size: 14px;
+    color: #1e3190;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    font-weight: 500;
 }
 
 .addTaskTitle h2,
@@ -75,9 +83,9 @@
     margin-top: 16px;
 }
 
-.descriptionBox input {
+.descriptionBox textarea {
     width: 222px;
-    height: 80px;
+    height: 140px;
     border: 1.4px solid #d4d4d4;
     border-radius: 3px;
     padding: 0px;
@@ -146,28 +154,19 @@
     border: 2px solid #1e3190 !important;
 }
 
-
-
-
 .checkbox_round {
-    /* position: fixed; */
     width: 140px;
     height: 1px;
     background-color: #ffffff00;
-    /* border-radius: 50%;
-    vertical-align: middle; */
-    /* border: 2px solid #ddd; */
-    /* appearance: none; */
     -webkit-appearance: none;
     outline: none;
-    /* cursor: pointer; */
 }
 
-/* .checkbox_round:checked {
-    border: 2px solid rgb(115, 115, 115);
-} */
-
 @media (max-width: 550px) {
+
+    .distributor{
+        margin-top: 100px
+    }
 
     .addTaskTitle,
     .addTaskCategory,
