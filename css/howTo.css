@@ -11,6 +11,9 @@
 .HowToCenter li {
     color: whitesmoke;
     margin: 20px 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
 }
 
 .main hr {
@@ -19,8 +22,6 @@
 }
 
 .main {
-
-
     margin: 0;
     background-image: url("../img/board-bg.jpg");
     z-index: 30000;
@@ -31,12 +32,10 @@
 }
 
 .blockCenter {
-
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-
 
 .h2Color {
     text-align: center;
@@ -52,8 +51,27 @@
     z-index: -3;
     background-color: rgba(0, 0, 0, 0.939);
 }
-li lo {
+
+li ol {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
 
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .HowToCenter {
+        flex-direction: column;
+        color: whitesmoke;
+        margin: 20px 20px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+    }
+
+
+
+
+
+
+    
 }
