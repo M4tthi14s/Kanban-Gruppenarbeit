@@ -18,10 +18,11 @@
 
 .main {
     margin: 0;
-    background-image: url("../img/board-bg.jpg");
+    background-image: url("../img/how-to.jpg");
     z-index: 30000;
-    opacity: 0.8;
-    background-repeat: no-repeat;
+    opacity: 0.7;
+    background-repeat: repeat-y;
+    background-position: bottom ;
     background-size: cover;
     margin-bottom: 100px;
 }
