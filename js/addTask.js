@@ -27,16 +27,7 @@ async function addTask() {
     let category = document.getElementById('category').value;
     let urgency = document.getElementById('urgency').value;
 
-    let idNum;
-    // chack(idNum);
-
-    if (!allTasksArray[1]) { idNum = 1 }
-    else {
-        let number = allTasksArray.length;
-        number = number - 1;
-        let index = allTasksArray[number].idNum
-        idNum = (index) + 1;
-    }
+    let idNum = Math.round(Date.now() / 1000);
 
     let color;
     if (urgency == 'High') { color = '#ff9393' };
@@ -66,17 +57,6 @@ async function addTask() {
     init();
     renderAvatar();
     document.getElementById("myForm").reset();
-}
-
-function chack(idNum){
-    if (!allTasksArray[1]) { idNum = 1 }
-    else {
-        let number = allTasksArray.length;
-        number = number - 1;
-        let index = allTasksArray[number].idNum
-        idNum = (index) + 1;
-    }
-    return idNum;
 }
 
 
