@@ -17,8 +17,8 @@
 }
 
 .main hr {
-    margin: 100px 200px;
-    width: 90vw;
+
+
 }
 
 .main {
@@ -47,9 +47,10 @@
 }
 
 .BGcolor {
+    width: 100vw;
 
     z-index: -3;
-    background-color: rgba(0, 0, 0, 0.939);
+    background-color: rgba(0, 0, 0, 0.9444);
 }
 
 li ol {
@@ -58,7 +59,7 @@ li ol {
 
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1100px) {
 
     .HowToCenter {
         flex-direction: column;
@@ -69,9 +70,56 @@ li ol {
     }
 
 
+    .descriptionImg1 img{
+        width: 700px;
+        height: 480px;
+
+    }
+
+    .descriptionImg2 img{
+        width: 700px;
+        height: 280px;
+
+    }
+
+    .descriptionImg3 img{
+        width: 750px;
+        height: 400px;
+
+    }
 
 
+}
 
 
-    
+@media only screen and (max-width: 600px) {
+
+    .HowToCenter {
+        flex-direction: column;
+        color: whitesmoke;
+        margin: 20px 20px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+    }
+
+
+    .descriptionImg1 img{
+        width: 500px;
+        height: 350px;
+
+    }
+
+    .descriptionImg2 img{
+        width: 500px;
+        height: 180px;
+
+    }
+
+    .descriptionImg3 img{
+        width: 500px;
+        height: 280px;
+
+    }
+
+
 }
