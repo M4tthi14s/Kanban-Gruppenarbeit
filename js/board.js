@@ -20,8 +20,6 @@ function generateTodoHTML(element) {
             </div>
             `
 }
-
-
 function renderAvatarPicFalse(index) {
     // console.log(index)
     let num
@@ -42,10 +40,8 @@ function renderAvatarPicFalse(index) {
     }
     // }
 }
-
 // letterName(i,j)
 // allTasksArray[num].names[j].replace('_', ' ')
-
 function renderPaperBin(element, dell) {
     if (dell == false) {
         return `<img onclick="deleteNote(${element['id']})" src="./img/close.svg"></img>`;
@@ -54,21 +50,15 @@ function renderPaperBin(element, dell) {
         return `<img onclick="paperBinNote(${element['id']})" src="./img/paperBin.png"></img>`;
         // return `<button onclick="paperBinNote(${element['id']})">Paperbin</button>`;
     }
-
 }
-
 // async function renderAfterBin(){
 //  await downloadFromServer
-
 // } 
-
-
 function updateHTML() {
-
     let ifFalse = allTasksArray.filter(t => t['backlog'] == false);
-
     let toDo = ifFalse.filter(t => t['board'] == 'toDo');
     document.getElementById('toDo').innerHTML = '';
+
     for (let index = 0; index < toDo.length; index++) {
         const element = toDo[index];
         document.getElementById('toDo').innerHTML += generateTodoHTML(element);
@@ -114,19 +104,15 @@ function updateHTML() {
     }
 }
 
-
 let currentDraggedElement;
-
 
 function startDragging(id) {
     currentDraggedElement = id;
 }
 
-
 function allowDrop(ev) {
     ev.preventDefault();
 }
-
 
 function moveTo(board) {
 
@@ -140,41 +126,27 @@ function moveTo(board) {
     }
  
 }
-
-
 function highlight(id) {
     document.getElementById(id).classList.add('box_Highlight')
 }
-
-
 function removeHighlight(id) {
     document.getElementById(id).classList.remove('box_Highlight')
 }
-
-
 function paperBinNote(position) {
-
     // console.log(position)
-
     let num;
     for (let i = 0; i < allTasksArray.length; i++) {
         if (allTasksArray[i].id == position) {
             num = i;
         }
     }
-
     // console.log(num)
-
-
     let index = "trash";
     allTasksArray[num]['board'] = index;
     pushToServer();
     updateHTML();
 }
-
-
 function deleteNote(position) {
-
     for (let i = 0; i < allTasksArray.length; i++) {
         if (allTasksArray[i].id == position) {
             allTasksArray.splice(i, 1);
@@ -184,8 +156,6 @@ function deleteNote(position) {
     // downloadFromServer();
     updateHTML();
 }
-
-
 async function pushToServer() {
     await backend.setItem('allTasksArray', JSON.stringify(allTasksArray));
 }
