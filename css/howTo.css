@@ -22,7 +22,7 @@
 
 
     margin: 0;
-    background-image: url("../board-bg.jpeg");
+    background-image: url("../img/board-bg.jpg");
     z-index: 30000;
     opacity: 0.8;
     background-repeat: no-repeat;
