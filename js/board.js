@@ -20,6 +20,8 @@ function generateTodoHTML(element) {
             </div>
             `
 }
+
+
 function renderAvatarPicFalse(index) {
     let num
     for (let i = 0; i < allTasksArray.length; i++) {
@@ -35,6 +37,8 @@ function renderAvatarPicFalse(index) {
                 </div>`;
     }
 }
+
+
 function renderPaperBin(element, dell) {
     if (dell == false) {
         return `<img onclick="deleteNote(${element['id']})" src="./img/close.svg"></img>`;
@@ -42,6 +46,8 @@ function renderPaperBin(element, dell) {
         return `<img onclick="paperBinNote(${element['id']})" src="./img/paperBin.png"></img>`;
     }
 }
+
+
 function updateHTML() {
     let ifFalse = allTasksArray.filter(t => t['backlog'] == false);
     let toDo = ifFalse.filter(t => t['board'] == 'toDo');
@@ -87,14 +93,19 @@ function updateHTML() {
     }
 }
 
+
 let currentDraggedElement;
 
 function startDragging(id) {
     currentDraggedElement = id;
 }
+
+
 function allowDrop(ev) {
     ev.preventDefault();
 }
+
+
 function moveTo(board) {
     for (let i = 0; i < allTasksArray.length; i++) {
         const content = allTasksArray[i].id;
@@ -104,12 +115,18 @@ function moveTo(board) {
         updateHTML();
     }
 }
+
+
 function highlight(id) {
     document.getElementById(id).classList.add('box_Highlight')
 }
+
+
 function removeHighlight(id) {
     document.getElementById(id).classList.remove('box_Highlight')
 }
+
+
 function paperBinNote(position) {
     let num;
     for (let i = 0; i < allTasksArray.length; i++) {
@@ -122,6 +139,8 @@ function paperBinNote(position) {
     pushToServer();
     updateHTML();
 }
+
+
 function deleteNote(position) {
     for (let i = 0; i < allTasksArray.length; i++) {
         if (allTasksArray[i].id == position) {
@@ -131,6 +150,8 @@ function deleteNote(position) {
     pushToServer();
     updateHTML();
 }
+
+
 async function pushToServer() {
     await backend.setItem('allTasksArray', JSON.stringify(allTasksArray));
 }
