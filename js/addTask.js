@@ -7,6 +7,7 @@ async function init() {
     allTasksArray = JSON.parse(backend.getItem('allTasksArray')) || [];
 
     menuLink('addTask');
+    renderAvatar();
 }
 
 
