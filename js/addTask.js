@@ -5,6 +5,8 @@ let allTasksArray = [{}];
 async function init() {
     await downloadFromServer();
     allTasksArray = JSON.parse(backend.getItem('allTasksArray')) || [];
+
+    menuLink('addTask');
 }
 
 
