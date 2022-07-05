@@ -17,14 +17,26 @@
 }
 
 .main {
-    margin: 0;
-    background-image: url("../img/how-to.jpg");
-    z-index: 30000;
-    opacity: 0.7;
-    background-repeat: repeat-y;
-    background-position: bottom ;
+
+
+
+
+
+
+}
+
+.BGHowTo{
+    background-image: url("../img/board-bg.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
-    margin-bottom: 100px;
+ 
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+z-index: -100;
+
 }
 
 .blockCenter {
@@ -42,12 +54,6 @@
     font-weight: bold;
 }
 
-.BGcolor {
-    width: 100vw;
-
-    z-index: -3;
-    background-color: rgba(0, 0, 0, 0.9444);
-}
 
 li ol {
     font-family: 'Roboto', sans-serif;
