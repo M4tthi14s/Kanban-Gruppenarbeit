@@ -16,27 +16,16 @@
     font-weight: bold;
 }
 
-.main {
-
-
-
-
-
-
-}
-
-.BGHowTo{
+.BGHowTo {
     background-image: url("../img/board-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
- 
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-z-index: -100;
-
+    z-index: -100;
 }
 
 .blockCenter {
@@ -54,12 +43,14 @@ z-index: -100;
     font-weight: bold;
 }
 
-
 li ol {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
-
 }
+
+
+/****** Responsive *************************************/
+
 
 @media only screen and (max-width: 1100px) {
 
@@ -119,13 +110,11 @@ li ol {
     .descriptionImg1 img {
         width: 300px;
         height: 210px;
-
     }
 
     .descriptionImg2 img {
         width: 300px;
         height: 130px;
-
     }
 
     .descriptionImg3 img {
