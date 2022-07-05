@@ -73,17 +73,12 @@ function avatarSelect(index) {
 
     if (names.includes(avatarArray[index])) {
         names = names.filter(a => a != avatarArray[index]);
-    } else {
-        names.push(avatarArray[index]);
     }
+    else { names.push(avatarArray[index]); }
 
-    if (names.length == 0) {
-        document.getElementById('checkbox').setAttribute("required", "");
-    }
+    if (names.length == 0) { document.getElementById('checkbox').setAttribute("required", ""); }
 
-    if (names.length > 0) {
-        document.getElementById('checkbox').removeAttribute('required');
-    }
+    if (names.length > 0) { document.getElementById('checkbox').removeAttribute('required'); }
 }
 
 
