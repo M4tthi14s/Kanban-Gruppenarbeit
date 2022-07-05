@@ -43,6 +43,12 @@
     align-items: flex-start;
     margin-left: 8px;
     width: 80px;
+    height: 108px;
+    overflow-y: auto;
+}
+
+.backlogTitle::-webkit-scrollbar {
+    display: none;
 }
 
 .backlogAssignedTo,
@@ -51,6 +57,14 @@
     width: 140px;
     background-color: #ffffff73;
     border-radius: 8px;
+    overflow-y: auto;
+    max-height: 108px;
+}
+
+.backlogAssignedTo::-webkit-scrollbar,
+.backlogCategory::-webkit-scrollbar,
+.backlogDetails::-webkit-scrollbar {
+    display: none;
 }
 
 .avatarPicTitle {

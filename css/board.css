@@ -5,10 +5,10 @@
     width: 900px;
     margin-top: 55px;
     margin-left: 16px;
-    
+
 }
 
-.background{
+.background {
     background-image: url(../img/board.jpg);
     background-size: cover;
     position: fixed;
@@ -18,7 +18,7 @@
     bottom: 0;
     right: 0;
     z-index: -100;
-    }
+}
 
 .headlineBoard {
     text-align: center;
@@ -119,6 +119,12 @@
 .note p {
     margin: 0px 0px 8px 0px;
     font-size: 16px;
+    height: 40px;
+    overflow-y: auto;
+}
+
+.note p::-webkit-scrollbar {
+    display: none;
 }
 
 .note h3 {
