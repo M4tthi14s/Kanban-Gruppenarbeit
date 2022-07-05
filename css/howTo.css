@@ -48,6 +48,10 @@ li ol {
     font-weight: bold;
 }
 
+.descriptionImg3 img {
+  
+    margin-bottom: 200px;
+}
 
 /****** Responsive *************************************/
 
@@ -79,7 +83,7 @@ li ol {
     .descriptionImg3 img {
         width: 750px;
         height: 400px;
-
+        margin-bottom: 200px;
     }
 
     .h2Color {
@@ -163,7 +167,7 @@ li ol {
     .descriptionImg3 img {
         width: 200px;
         height: 112px;
-        margin-bottom: 50px;
+        margin-bottom: 150px;
     }
 
     .h2Color {
