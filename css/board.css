@@ -3,7 +3,7 @@
     flex-direction: column;
     /* width: 100%; */
     width: 900px;
-    margin-top: 157px;
+    margin-top: 55px;
     margin-left: 16px;
     
 }
@@ -148,13 +148,14 @@
 
 
 .boardTask {
-    border: 1.6px solid #cbcbcb;
+    /* border: 1.6px solid #cbcbcb; */
     cursor: pointer;
     background-color: rgb(255, 255, 255);
     margin-bottom: 8px;
     padding: 8px;
     border-radius: 8px;
     transition: all 125ms linear;
+    box-shadow: 0px 0px 2px 1px #707070;
 }
 
 .boardTask:hover {

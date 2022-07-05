@@ -27,6 +27,7 @@
     background-color: #f4f3fb;
     border-radius: 8px;
     padding: 16px;
+    box-shadow: 0px 0px 2px 1px #505050;
 }
 
 .addTaskTitle {

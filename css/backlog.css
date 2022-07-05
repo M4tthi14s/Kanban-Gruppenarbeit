@@ -73,11 +73,12 @@
 .task {
     display: flex;
     justify-content: space-between;
-    border: 1.6px solid #858585;
+    /* border: 1.6px solid #858585; */
     border-radius: 8px;
     margin-bottom: 8px;
     padding: 6px 2px;
     transition: all 125ms linear;
+    box-shadow: 0px 0px 2px 1px #505050;
 }
 
 .task:hover {
