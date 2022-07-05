@@ -61,6 +61,14 @@ async function addTask() {
     init();
     renderAvatar();
     document.getElementById("myForm").reset();
+
+    goToBacklog();
+}
+
+
+function goToBacklog() {
+    menuLink('backlog');
+    backlogList();
 }
 
 
