@@ -82,12 +82,12 @@ function selectColor(urgency) {
 
 function avatarSelect(index) {
     document.getElementById(index).classList.toggle('avatarAddTaskToggle');
-
+    console.log(index)
     if (names.includes(avatarArray[index])) {
         names = names.filter(a => a != avatarArray[index]);
     }
     else { names.push(avatarArray[index]); }
-
+    console.log(names)
     if (names.length == 0) { document.getElementById('checkbox').setAttribute("required", ""); }
 
     if (names.length > 0) { document.getElementById('checkbox').removeAttribute('required'); }
