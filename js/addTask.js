@@ -2,6 +2,9 @@ setURL('https://sebastian-gamroth.developerakademie.net/smallest_backend_ever-ma
 
 
 let allTasksArray = [{}];
+let avatarArray = ['Bob_Marley', 'Lisa_Brennon', 'Mili_Vanilli', 'Ron_Stevens', 'Ula_Kockambrink', 'Wolf_Belford'];
+let names = [];
+let color;
 
 
 async function init() {
@@ -29,10 +32,7 @@ async function addTask() {
 
     let idNum = Math.round(Date.now() / 1000);
 
-    let color;
-    if (urgency == 'High') { color = '#ff9393' };
-    if (urgency == 'Normal') { color = '#ffcc6d' };
-    if (urgency == 'Low') { color = '#95ff95' };
+    selectChange(urgency);
 
     let task = {
         'title': title.value,
@@ -60,8 +60,12 @@ async function addTask() {
 }
 
 
-let avatarArray = ['Bob_Marley', 'Lisa_Brennon', 'Mili_Vanilli', 'Ron_Stevens', 'Ula_Kockambrink', 'Wolf_Belford'];
-let names = [];
+function selectChange(urgency) {
+    if (urgency == 'High') { color = '#ff9393' };
+    if (urgency == 'Normal') { color = '#ffcc6d' };
+    if (urgency == 'Low') { color = '#95ff95' };
+    return color;
+}
 
 
 function avatarSelect(index) {
@@ -72,7 +76,6 @@ function avatarSelect(index) {
     } else {
         names.push(avatarArray[index]);
     }
-
 
     if (names.length == 0) {
         document.getElementById('checkbox').setAttribute("required", "");

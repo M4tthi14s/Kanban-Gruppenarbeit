@@ -49,7 +49,18 @@ function renderPaperBin(element, dell) {
 
 
 function updateHTML() {
+
     let ifFalse = allTasksArray.filter(t => t['backlog'] == false);
+
+    filterToDo(ifFalse);
+    filterInProgress(ifFalse);
+    filterTesting(ifFalse);
+    filterDone(ifFalse);
+    filterTrash(ifFalse);
+}
+
+
+function filterToDo(ifFalse) {
     let toDo = ifFalse.filter(t => t['board'] == 'toDo');
     document.getElementById('toDo').innerHTML = '';
     for (let index = 0; index < toDo.length; index++) {
@@ -58,6 +69,10 @@ function updateHTML() {
         renderAvatarPicFalse(element['id']);
         document.getElementById('paperBin_' + element['id']).innerHTML = renderPaperBin(element);
     }
+}
+
+
+function filterInProgress(ifFalse) {
     let inProgress = ifFalse.filter(t => t['board'] == 'inProgress');
     document.getElementById('inProgress').innerHTML = '';
     for (let index = 0; index < inProgress.length; index++) {
@@ -66,6 +81,10 @@ function updateHTML() {
         renderAvatarPicFalse(element['id']);
         document.getElementById('paperBin_' + element['id']).innerHTML = renderPaperBin(element);
     }
+}
+
+
+function filterTesting(ifFalse) {
     let testing = ifFalse.filter(t => t['board'] == 'testing');
     document.getElementById('testing').innerHTML = '';
     for (let index = 0; index < testing.length; index++) {
@@ -74,6 +93,10 @@ function updateHTML() {
         renderAvatarPicFalse(element['id']);
         document.getElementById('paperBin_' + element['id']).innerHTML = renderPaperBin(element);
     }
+}
+
+
+function filterDone(ifFalse) {
     let done = ifFalse.filter(t => t['board'] == 'done');
     document.getElementById('done').innerHTML = '';
     for (let index = 0; index < done.length; index++) {
@@ -82,6 +105,10 @@ function updateHTML() {
         renderAvatarPicFalse(element['id']);
         document.getElementById('paperBin_' + element['id']).innerHTML = renderPaperBin(element);
     }
+}
+
+
+function filterTrash(ifFalse) {
     let trash = ifFalse.filter(t => t['board'] == 'trash');
     document.getElementById('trash').innerHTML = '';
     for (let index = 0; index < trash.length; index++) {
@@ -95,6 +122,7 @@ function updateHTML() {
 
 
 let currentDraggedElement;
+
 
 function startDragging(id) {
     currentDraggedElement = id;
