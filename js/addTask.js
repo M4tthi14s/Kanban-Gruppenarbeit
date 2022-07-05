@@ -58,7 +58,7 @@ async function addTask() {
     allTasksArray.push(task);
     await backend.setItem('allTasksArray', JSON.stringify(allTasksArray));
 
-    init();
+    await init();
     renderAvatar();
     document.getElementById("myForm").reset();
 
