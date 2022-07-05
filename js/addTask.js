@@ -18,6 +18,7 @@ function formValidationAddTask() {
 }
 
 
+let color;
 /**
  * adds tasks in array
  */
@@ -29,10 +30,7 @@ async function addTask() {
 
     let idNum = Math.round(Date.now() / 1000);
 
-    let color;
-    if (urgency == 'High') { color = '#ff9393' };
-    if (urgency == 'Normal') { color = '#ffcc6d' };
-    if (urgency == 'Low') { color = '#95ff95' };
+    selectChange(urgency);
 
     let task = {
         'title': title.value,
@@ -57,6 +55,26 @@ async function addTask() {
     init();
     renderAvatar();
     document.getElementById("myForm").reset();
+
+
+    // openBacklog();
+}
+
+
+
+
+
+function selectChange(urgency) {
+    if (urgency == 'High') { color = '#ff9393' };
+    if (urgency == 'Normal') { color = '#ffcc6d' };
+    if (urgency == 'Low') { color = '#95ff95' };
+    return color;
+}
+
+
+function openBacklog() {
+    menuLink('backlog');
+    backlogList();
 }
 
 
@@ -72,7 +90,6 @@ function avatarSelect(index) {
     } else {
         names.push(avatarArray[index]);
     }
-
 
     if (names.length == 0) {
         document.getElementById('checkbox').setAttribute("required", "");
