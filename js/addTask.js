@@ -57,14 +57,6 @@ async function addTask() {
     init();
     renderAvatar();
     document.getElementById("myForm").reset();
-
-    // openBacklog();
-}
-
-
-function openBacklog() {
-    menuLink('backlog');
-    backlogList();
 }
 
 
