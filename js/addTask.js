@@ -4,6 +4,7 @@ setURL('https://sebastian-gamroth.developerakademie.net/smallest_backend_ever-ma
 let allTasksArray = [{}];
 let avatarArray = ['Bob_Marley', 'Lisa_Brennon', 'Mili_Vanilli', 'Ron_Stevens', 'Ula_Kockambrink', 'Wolf_Belford'];
 let names = [];
+let task = [];
 let color;
 
 
@@ -21,20 +22,8 @@ function formValidationAddTask() {
 }
 
 
-/**
- * adds tasks in array
- */
-async function addTask() {
-    let title = document.getElementById('title');
-    let description = document.getElementById('description');
-    let category = document.getElementById('category').value;
-    let urgency = document.getElementById('urgency').value;
-
-    let idNum = Math.round(Date.now() / 1000);
-
-    selectChange(urgency);
-
-    let task = {
+function fillTask(title, description, category, urgency, idNum) {
+    task = {
         'title': title.value,
         'names': names,
         'description': description.value,
@@ -46,6 +35,21 @@ async function addTask() {
         'board': 'toDo',
         'color': color
     };
+}
+
+/**
+ * adds tasks in array
+ */
+async function addTask() {
+    let title = document.getElementById('title');
+    let description = document.getElementById('description');
+    let category = document.getElementById('category').value;
+    let urgency = document.getElementById('urgency').value;
+    let idNum = Math.round(Date.now() / 1000);
+
+    selectColor(urgency);
+
+    fillTask(title, description, category, urgency, idNum);
 
     title.value = '';
     description.value = '';
@@ -60,7 +64,7 @@ async function addTask() {
 }
 
 
-function selectChange(urgency) {
+function selectColor(urgency) {
     if (urgency == 'High') { color = '#ff9393' };
     if (urgency == 'Normal') { color = '#ffcc6d' };
     if (urgency == 'Low') { color = '#95ff95' };
