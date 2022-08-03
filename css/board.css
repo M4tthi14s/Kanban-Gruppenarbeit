@@ -123,9 +123,10 @@
     overflow-y: auto;
 }
 
+/* scrollbar none */
 .note p::-webkit-scrollbar {
     display: none;
-}
+}   
 
 .note h3 {
     margin: 0px;
